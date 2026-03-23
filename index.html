@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myari Nasandratra — UI/UX & Graphic Designer</title>
+    <meta
+      name="description"
+      content="Portfolio de Myari Nasandratra, UI/UX & Graphic Designer basé à Madagascar. Interfaces digitales et identités visuelles."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ══ PAGE LOADER ══════════════════════════════ -->
+    <div id="page-loader">
+      <div class="loader-logo">M.N</div>
+    </div>
+
+    <!-- ══ SCROLL PROGRESS ══════════════════════════ -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- ══ CURSOR ═══════════════════════════════════ -->
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ══ FLAME SPRITE ═════════════════════════════ -->
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="flame-icon" viewBox="0 0 42 52">
+        <path
+          d="M21 0C21 0 10 14 10 26a11 11 0 0022 0c0-6-4-10-4-10s2 4-1 7a5 5 0 01-10 0c0-8 8-14 4-23z"
+          fill="#0E0E0E"
+        />
+        <path
+          d="M30 16C30 16 24 24 24 32a6 6 0 0012 0c0-5-3-8-6-16z"
+          fill="#555555"
+          opacity=".7"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ══ NAVBAR ═══════════════════════════════════ -->
+    <nav id="nav">
+      <a href="#" class="nav-logo" aria-label="Accueil"> Myari Nasandratra </a>
+
+      <ul class="nav-links">
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- ── SVG THEME TOGGLE ── -->
+        <button
+          class="theme-btn"
+          id="themeToggle"
+          aria-label="Basculer mode clair / sombre"
+          title="Changer de thème"
+        >
+          <div class="theme-btn-knob">
+            <!-- SUN icon (visible in light mode) -->
+            <svg
+              class="knob-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#F59E0B"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            >
+              <circle cx="12" cy="12" r="4.5" />
+              <line x1="12" y1="2" x2="12" y2="4.5" />
+              <line x1="12" y1="19.5" x2="12" y2="22" />
+              <line x1="2" y1="12" x2="4.5" y2="12" />
+              <line x1="19.5" y1="12" x2="22" y2="12" />
+              <line x1="5.3" y1="5.3" x2="7.1" y2="7.1" />
+              <line x1="16.9" y1="16.9" x2="18.7" y2="18.7" />
+              <line x1="5.3" y1="18.7" x2="7.1" y2="16.9" />
+              <line x1="16.9" y1="7.1" x2="18.7" y2="5.3" />
+            </svg>
+            <!-- MOON icon (visible in dark mode) -->
+            <svg
+              class="knob-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#A5B4FC"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+            </svg>
+          </div>
+        </button>
+        <span class="theme-label" id="theme-label">Clair</span>
+
+        <!-- ── HAMBURGER ── -->
+        <button class="hamburger" id="ham" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div
+      class="mobile-nav"
+      id="mobileNav"
+      role="navigation"
+      aria-label="Menu mobile"
+    >
+      <a href="#projets">Projets</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- ══ SCROLL HINT ══════════════════════════════ -->
+    <div class="scroll-hint" id="scrollHint" aria-hidden="true">
+      <div class="scroll-line"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <!-- Parallax checker background (right column) -->
+      <div class="hero-checker" aria-hidden="true"></div>
+
+      <!-- ── LEFT: Photo ── -->
+      <div class="hero-photo-col">
+        <div class="hero-photo-inner">
+          <div class="hero-photo-wrap">
+            <img
+              src=img/photonasa.jpg
+              alt="Myari Nasandratra — Designer UI/UX & Graphic"
+            />
+            <div class="photo-fallback" id="photo-fallback">
+              <div class="grid-overlay"></div>
+              <div class="initials">MN</div>
+              <div class="glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT: Description ── -->
+      <div class="hero-right">
+        <!-- Availability badge -->
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-dot"></div>
+          <span>Disponible · Antananarivo, Madagascar</span>
+        </div>
+
+        <!-- Name -->
+        <h1 class="hero-name">
+          <span class="w1">Myari</span>
+          <span class="w2">Nasandratra</span>
+        </h1>
+
+        <!-- Roles -->
+        <div class="hero-roles-line" aria-label="Spécialités">
+          <span class="hero-role active">UI/UX Designer</span>
+          <span class="role-dot" aria-hidden="true"></span>
+          <span class="hero-role">Graphic Designer</span>
+        </div>
+
+        <!-- Description -->
+        <p class="hero-desc">
+          Interfaces digitales &amp; identités visuelles<br />
+          <strong>claires, utiles et modernes.</strong>
+        </p>
+
+        <!-- CTA -->
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-primary">
+            Contact <span class="arr">↗</span>
+          </a>
+          <a
+            href="/CV Andriankotmiarintsoa.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener"
+          >
+            Mon CV <span class="arr">↓</span>
+          </a>
+        </div>
+
+        <!-- Floating decorative flame -->
+        <svg class="hero-flame-float" viewBox="0 0 42 52" aria-hidden="true">
+          <use href="#flame-icon" />
+        </svg>
+
+        <!-- Pulse dot -->
+        <div class="hero-dot-group" aria-hidden="true">
+          <div class="hero-dot-inner"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ MARQUEE ═══════════════════════════════════ -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-inner">
+        <div class="marquee-item"><span class="mdot"></span>Figma</div>
+        <div class="marquee-item"><span class="mdot"></span>UI/UX Design</div>
+        <div class="marquee-item"><span class="mdot"></span>Graphic Design</div>
+        <div class="marquee-item"><span class="mdot"></span>Photoshop</div>
+        <div class="marquee-item"><span class="mdot"></span>Illustrator</div>
+        <div class="marquee-item"><span class="mdot"></span>InDesign</div>
+        <div class="marquee-item">
+          <span class="mdot"></span>HTML · CSS · JS
+        </div>
+        <div class="marquee-item"><span class="mdot"></span>Miro</div>
+        <div class="marquee-item"><span class="mdot"></span>Tests UX</div>
+        <div class="marquee-item"><span class="mdot"></span>Affinity</div>
+        <div class="marquee-item"><span class="mdot"></span>Notion</div>
+        <div class="marquee-item"><span class="mdot"></span>Figma</div>
+        <div class="marquee-item"><span class="mdot"></span>UI/UX Design</div>
+        <div class="marquee-item"><span class="mdot"></span>Graphic Design</div>
+        <div class="marquee-item"><span class="mdot"></span>Photoshop</div>
+        <div class="marquee-item"><span class="mdot"></span>Illustrator</div>
+        <div class="marquee-item"><span class="mdot"></span>InDesign</div>
+        <div class="marquee-item">
+          <span class="mdot"></span>HTML · CSS · JS
+        </div>
+        <div class="marquee-item"><span class="mdot"></span>Miro</div>
+        <div class="marquee-item"><span class="mdot"></span>Tests UX</div>
+        <div class="marquee-item"><span class="mdot"></span>Affinity</div>
+        <div class="marquee-item"><span class="mdot"></span>Notion</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+     À PROPOS
+══════════════════════════════════════════════ -->
+    <section class="section about-section" id="apropos">
+      <!-- Parallax checker layer -->
+      <div class="about-checker" aria-hidden="true"></div>
+
+      <div class="about-inner">
+        <!-- LEFT -->
+        <div class="reveal-left">
+          <div class="about-label">
+            <svg width="22" height="28" viewBox="0 0 42 52" aria-hidden="true">
+              <use href="#flame-icon" />
+            </svg>
+            <span class="about-label-text">À propos</span>
+          </div>
+
+          <p class="about-p">
+            Designer UI/UX &amp; Graphic, avec
+            <strong>2 ans d'expérience</strong>, 6 mois en intégration web. Une
+            approche centrée utilisateur pour des
+            <strong>interfaces simples et efficaces</strong>.
+          </p>
+          <p class="about-p">
+            J'allie UX Research et design visuel pour créer des produits faciles
+            à utiliser — clairs, fonctionnels et visuellement cohérents.
+          </p>
+
+          <a
+            href="/CV Andriankotmiarintsoa.pdf"
+            class="cv-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            Voir mon CV
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+
+          <div class="about-stats reveal" data-delay=".15">
+            <div class="stat-cell">
+              <span class="stat-num">2+</span>
+              <span class="stat-lbl">Ans UI/UX</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-num">6</span>
+              <span class="stat-lbl">Mois Web</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-num">10+</span>
+              <span class="stat-lbl">Outils</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Skills -->
+        <div class="reveal-right" data-delay=".1">
+          <p class="skills-label">Outils &amp; Tech maîtrisés</p>
+          <div class="skills-cloud stagger">
+            <span class="skill-pill">Photoshop</span>
+            <span class="skill-pill">Miro</span>
+            <span class="skill-pill">Figma</span>
+            <span class="skill-pill">InDesign</span>
+            <span class="skill-pill">Tests UX</span>
+            <span class="skill-pill">Gemini AI</span>
+            <span class="skill-pill">Notion</span>
+            <span class="skill-pill">Affinity</span>
+            <span class="skill-pill">Illustrator</span>
+            <span class="skill-pill">HTML / CSS</span>
+            <span class="skill-pill">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     PROJETS
+══════════════════════════════════════════════ -->
+    <section class="section projects-section" id="projets">
+      <!-- Parallax checker -->
+      <div class="proj-checker" aria-hidden="true"></div>
+
+      <div class="projects-header">
+        <div class="projects-header-left reveal">
+          <p class="eyebrow">Projets</p>
+          <h2 class="section-title">
+            Mon <em>travail</em>
+            <svg
+              width="22"
+              height="28"
+              viewBox="0 0 42 52"
+              style="
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 0.4rem;
+              "
+              aria-hidden="true"
+            >
+              <use href="#flame-icon" />
+            </svg>
+          </h2>
+        </div>
+        <div class="projects-divider reveal" data-delay=".2"></div>
+      </div>
+
+      <div class="projects-grid stagger">
+        <!-- Card 1 — UI/UX -->
+        <a
+          href="https://www.behance.net/nasandrandrian1"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+          aria-label="Voir les projets UI/UX Design sur Behance"
+        >
+          <div class="proj-img">
+            <img
+              src=img/Testimonial_left_side.jpg
+              alt="UI/UX — wireframes, prototypage, design d'interface"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-img-badge">UI/UX Design</span>
+            <div class="proj-stripe"></div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <h3 class="proj-title">UI/UX</h3>
+              <p class="proj-sub">Figma · Prototypage · UX Research</p>
+            </div>
+            <span class="proj-discover"
+              >Découvrir <span class="arr">→</span></span
+            >
+          </div>
+        </a>
+
+        <!-- Card 2 — Graphic Design -->
+        <a
+          href="https://www.behance.net/nasandrmiarint"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+          aria-label="Voir les projets Graphic Design sur Behance"
+        >
+          <div class="proj-img">
+            <img
+              src=img/Testimonial_right_side.jpg
+              alt="Graphic Design — identités visuelles, affiches, branding"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-img-badge">Graphic Design</span>
+            <div class="proj-stripe"></div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <h3 class="proj-title">Graphic Design</h3>
+              <p class="proj-sub">Illustrator · Photoshop · InDesign</p>
+            </div>
+            <span class="proj-discover"
+              >Découvrir <span class="arr">→</span></span
+            >
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+    <section class="section contact-section" id="contact">
+      <!-- Parallax checker -->
+      <div class="contact-checker" aria-hidden="true"></div>
+
+      <div class="contact-inner">
+        <!-- LEFT: Links -->
+        <div class="reveal-left">
+          <div class="contact-links-col stagger">
+            <a
+              href="https://www.linkedin.com/in/nasandratra-andriankotomiarintsoa-115206358/"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-item"
+            >
+              <div class="cli">in</div>
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/Myarinasandratra-dev"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-item"
+            >
+              <div class="cli">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
+                  />
+                </svg>
+              </div>
+              Github
+            </a>
+
+            <a
+              href="https://wa.me/261345685692"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-item"
+            >
+              <div class="cli">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.309A9.942 9.942 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
+                  />
+                </svg>
+              </div>
+              WhatsApp
+            </a>
+
+            <div
+              class="contact-link-item"
+              style="cursor: default; pointer-events: none"
+            >
+              <div class="cli">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01-.004 1.103a2 2 0 011.997-2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"
+                  />
+                </svg>
+              </div>
+              +261 34 56 856 92
+            </div>
+
+            <div
+              class="contact-link-item"
+              style="cursor: default; pointer-events: none"
+            >
+              <div class="cli">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              andriankotomiariantsoa24@gmail.com
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: CTA -->
+        <div class="contact-right reveal-right" data-delay=".15">
+          <h2 class="contact-cta-title">
+            Intéressé par<br />mon travail ?<br />
+            <em>Discutons</em> ensemble.
+          </h2>
+
+          <a
+            href="https://wa.me/261345685692?text=Bonjour,%20je%20souhaite%20plus%20d'informations"
+            target="_blank"
+            rel="noopener"
+            class="wa-btn"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.309A9.942 9.942 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
+              />
+            </svg>
+            Me contacter sur WhatsApp ↗
+          </a>
+
+          <div class="avail-badge">
+            <div class="avail-dot"></div>
+            Disponible immédiatement
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ════════════════════════════════════ -->
+    <div class="footer-bar">
+      <span class="footer-copy">MN.CREATIVE © 2026 — Myari Nasandratra</span>
+
+      <div class="footer-socials">
+        <a
+          href="https://www.linkedin.com/in/nasandratra-andriankotomiarintsoa-115206358/"
+          target="_blank"
+          rel="noopener"
+          class="soc-link"
+          aria-label="LinkedIn"
+          >in</a
+        >
+
+        <a
+          href="https://github.com/Myarinasandratra-dev"
+          target="_blank"
+          rel="noopener"
+          class="soc-link"
+          aria-label="GitHub"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="https://wa.me/261345685692"
+          target="_blank"
+          rel="noopener"
+          class="soc-link"
+          aria-label="WhatsApp"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.309A9.942 9.942 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="https://www.behance.net/nasandrandrian1"
+          target="_blank"
+          rel="noopener"
+          class="soc-link"
+          aria-label="Behance"
+          >Bē</a
+        >
+      </div>
+
+      <button
+        class="back-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        aria-label="Retour en haut de page"
+      >
+        ↑ Retour en haut
+      </button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
