@@ -47,3 +47,19 @@ const io = new IntersectionObserver(
   { threshold: 0.12 },
 );
 document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+const tools = document.querySelectorAll(".tls .ti");
+tools.forEach((el, i) => el.style.setProperty("--i", i));
+
+const toolsObs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("on");
+        toolsObs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 },
+);
+
+tools.forEach((el) => toolsObs.observe(el));
