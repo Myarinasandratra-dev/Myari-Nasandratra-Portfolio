@@ -130,6 +130,83 @@ h1 em {
   font-style: normal;
   color: #8c8c86;
 }
+.tls {
+  display: grid;
+  gap: 12px;
+}
+.tls .ti {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(34px);
+  transition:
+    opacity 0.7s var(--e),
+    transform 0.7s var(--e),
+    box-shadow 0.4s var(--e);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.tls .ti.on {
+  opacity: 1;
+  transform: none;
+}
+.tls .ti.on:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  transition-delay: 0s;
+}
+
+.tls .ic {
+  min-width: 46px;
+  height: 46px;
+  padding: 0 10px;
+  border-radius: 11px;
+  background: #f3f3f1;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  transition: background 0.35s var(--e);
+}
+.tls .ic svg {
+  display: block;
+  flex: none;
+  transition: transform 0.45s var(--e);
+}
+.tls .ti:hover .ic {
+  background: var(--l);
+}
+.tls .ti:hover .ic svg {
+  transform: scale(1.15) rotate(-6deg);
+}
+.tls .ti:hover .ic svg:nth-child(2) {
+  transition-delay: 0.05s;
+}
+.tls .ti:hover .ic svg:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.tls h3 {
+  font-size: 13px;
+  font-weight: 600;
+}
+.tls p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tls .ti {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 h1 .w {
   display: inline-block;
   overflow: hidden;
