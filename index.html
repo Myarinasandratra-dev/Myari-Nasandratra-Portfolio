@@ -1,615 +1,450 @@
 <!doctype html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Myari Nasandratra — UI/UX & Graphic Designer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Myari Nasandratra | UI/UX Designer et Graphic Designer</title>
     <meta
       name="description"
       content="Portfolio de Myari Nasandratra, UI/UX & Graphic Designer basé à Madagascar. Interfaces digitales et identités visuelles."
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/Artboard.svg" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- ══ PAGE LOADER ══════════════════════════════ -->
-    <div id="page-loader">
-      <div class="loader-logo">M.N</div>
-    </div>
-
-    <!-- ══ SCROLL PROGRESS ══════════════════════════ -->
-    <div id="scroll-progress" aria-hidden="true"></div>
-
-    <!-- ══ CURSOR ═══════════════════════════════════ -->
-    <div id="cursor-dot" aria-hidden="true"></div>
-    <div id="cursor-ring" aria-hidden="true"></div>
-
-    <!-- ══ FLAME SPRITE ═════════════════════════════ -->
-    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
-      <symbol id="flame-icon" viewBox="0 0 42 52">
-        <path
-          d="M21 0C21 0 10 14 10 26a11 11 0 0022 0c0-6-4-10-4-10s2 4-1 7a5 5 0 01-10 0c0-8 8-14 4-23z"
-          fill="#0E0E0E"
-        />
-        <path
-          d="M30 16C30 16 24 24 24 32a6 6 0 0012 0c0-5-3-8-6-16z"
-          fill="#555555"
-          opacity=".7"
-        />
-      </symbol>
-    </svg>
-
-    <!-- ══ NAVBAR ═══════════════════════════════════ -->
-    <nav id="nav">
-      <a href="#" class="nav-logo" aria-label="Accueil"> Myari Nasandratra </a>
-
-      <ul class="nav-links">
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-right">
-        <!-- ── SVG THEME TOGGLE ── -->
-        <button
-          class="theme-btn"
-          id="themeToggle"
-          aria-label="Basculer mode clair / sombre"
-          title="Changer de thème"
+    <nav>
+      <div class="c">
+        <a class="lg" href="#top"
+          ><img
+            src="assets/img/Artboard.svg"
+            alt=""
+            width="28"
+            height="28"
+          />Myari Nasandratra</a
         >
-          <div class="theme-btn-knob">
-            <!-- SUN icon (visible in light mode) -->
-            <svg
-              class="knob-sun"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#F59E0B"
-              stroke-width="2.2"
-              stroke-linecap="round"
-            >
-              <circle cx="12" cy="12" r="4.5" />
-              <line x1="12" y1="2" x2="12" y2="4.5" />
-              <line x1="12" y1="19.5" x2="12" y2="22" />
-              <line x1="2" y1="12" x2="4.5" y2="12" />
-              <line x1="19.5" y1="12" x2="22" y2="12" />
-              <line x1="5.3" y1="5.3" x2="7.1" y2="7.1" />
-              <line x1="16.9" y1="16.9" x2="18.7" y2="18.7" />
-              <line x1="5.3" y1="18.7" x2="7.1" y2="16.9" />
-              <line x1="16.9" y1="7.1" x2="18.7" y2="5.3" />
-            </svg>
-            <!-- MOON icon (visible in dark mode) -->
-            <svg
-              class="knob-moon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#A5B4FC"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
-            </svg>
-          </div>
-        </button>
-        <span class="theme-label" id="theme-label">Clair</span>
-
-        <!-- ── HAMBURGER ── -->
-        <button class="hamburger" id="ham" aria-label="Ouvrir le menu">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nl">
+          <a href="#projets">Mes projets</a><a href="#apropos">À propos</a
+          ><a href="#process">Mon process</a>
+        </div>
+        <a class="pill" href="#contact">Me contacter <i>↗</i></a>
       </div>
     </nav>
 
-    <!-- Mobile nav -->
-    <div
-      class="mobile-nav"
-      id="mobileNav"
-      role="navigation"
-      aria-label="Menu mobile"
-    >
-      <a href="#projets">Projets</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <!-- ══ SCROLL HINT ══════════════════════════════ -->
-    <div class="scroll-hint" id="scrollHint" aria-hidden="true">
-      <div class="scroll-line"></div>
-    </div>
-
-    <!-- ══════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════ -->
-    <section class="hero" id="hero">
-      <!-- Parallax checker background (right column) -->
-      <div class="hero-checker" aria-hidden="true"></div>
-
-      <!-- ── LEFT: Photo ── -->
-      <div class="hero-photo-col">
-        <div class="hero-photo-inner">
-          <div class="hero-photo-wrap">
-            <img
-              src=img/photonasa.jpg
-              alt="Myari Nasandratra — Designer UI/UX & Graphic"
-            />
-            <div class="photo-fallback" id="photo-fallback">
-              <div class="grid-overlay"></div>
-              <div class="initials">MN</div>
-              <div class="glow"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── RIGHT: Description ── -->
-      <div class="hero-right">
-        <!-- Availability badge -->
-        <div class="hero-eyebrow">
-          <div class="hero-eyebrow-dot"></div>
-          <span>Disponible · Antananarivo, Madagascar</span>
-        </div>
-
-        <!-- Name -->
-        <h1 class="hero-name">
-          <span class="w1">Myari</span>
-          <span class="w2">Nasandratra</span>
+    <header class="hero" id="top">
+      <div class="c">
+        <h1 id="h1">
+          UI/UX Designer & Graphic Designer · <em>Myari Nasandratra</em>
         </h1>
-
-        <!-- Roles -->
-        <div class="hero-roles-line" aria-label="Spécialités">
-          <span class="hero-role active">UI/UX Designer</span>
-          <span class="role-dot" aria-hidden="true"></span>
-          <span class="hero-role">Graphic Designer</span>
+        <div class="hp">
+          <p>
+            Je ne commence pas par le design.<br /><span
+              >Je commence par comprendre qui va l'utiliser.</span
+            >
+          </p>
+          <p>
+            <span
+              >Je conçois des interfaces et des identités visuelles
+              claires.</span
+            ><br />Ce que vous validez en maquette est cohérent, utile et
+            moderne.
+          </p>
         </div>
+        <a class="pill" href="#projets">Voir mes projets <i>↗</i></a>
+      </div>
+      <div class="sc">Continuez à scroller<br />↓</div>
+    </header>
 
-        <!-- Description -->
-        <p class="hero-desc">
-          Interfaces digitales &amp; identités visuelles<br />
-          <strong>claires, utiles et modernes.</strong>
-        </p>
+    <div class="tk" aria-hidden="true"><div class="tr" id="t1"></div></div>
 
-        <!-- CTA -->
-        <div class="hero-cta-row">
-          <a href="#contact" class="btn btn-primary">
-            Contact <span class="arr">↗</span>
-          </a>
+    <section id="projets">
+      <div class="c">
+        <div class="rv">
+          <div class="lb">(01) — Projets sélectionnés</div>
+          <h2>Je conçois, je crée — sans relais.</h2>
+          <p class="lead">
+            Personne n'achète une interface. On achète une solution. Voici mes
+            univers de travail, pensés pour être utilisés.
+          </p>
+          <a class="pill" href="#contact">Démarrer un projet <i>↗</i></a>
+        </div>
+        <div class="pg rv">
           <a
-            href="/CV Andriankotmiarintsoa.pdf"
-            class="btn btn-outline"
+            class="pj"
+            href="https://www.behance.net/nasandrandrian1"
             target="_blank"
             rel="noopener"
+            ><small><b>[ UI/UX ]</b> Figma</small>
+            <h3>UI/UX Design</h3>
+            <p>Wireframes · Prototypage · UX Research</p>
+            <div class="th">UX</div></a
           >
-            Mon CV <span class="arr">↓</span>
-          </a>
-        </div>
-
-        <!-- Floating decorative flame -->
-        <svg class="hero-flame-float" viewBox="0 0 42 52" aria-hidden="true">
-          <use href="#flame-icon" />
-        </svg>
-
-        <!-- Pulse dot -->
-        <div class="hero-dot-group" aria-hidden="true">
-          <div class="hero-dot-inner"></div>
+          <a
+            class="pj"
+            href="https://www.behance.net/nasandrmiarint"
+            target="_blank"
+            rel="noopener"
+            ><small><b>[ Graphic ]</b> Branding</small>
+            <h3>Graphic Design</h3>
+            <p>Identités visuelles · Affiches · Branding</p>
+            <div class="th">GD</div></a
+          >
         </div>
       </div>
     </section>
 
-    <!-- ══ MARQUEE ═══════════════════════════════════ -->
-    <div class="marquee-strip" aria-hidden="true">
-      <div class="marquee-inner">
-        <div class="marquee-item"><span class="mdot"></span>Figma</div>
-        <div class="marquee-item"><span class="mdot"></span>UI/UX Design</div>
-        <div class="marquee-item"><span class="mdot"></span>Graphic Design</div>
-        <div class="marquee-item"><span class="mdot"></span>Photoshop</div>
-        <div class="marquee-item"><span class="mdot"></span>Illustrator</div>
-        <div class="marquee-item"><span class="mdot"></span>InDesign</div>
-        <div class="marquee-item">
-          <span class="mdot"></span>HTML · CSS · JS
+    <section id="apropos">
+      <div class="c ab">
+        <div class="ph rv">
+          <span>MN</span
+          ><img
+            src="assets/img/image_P.jpg"
+            alt="Myari Nasandratra, UI/UX et Graphic Designer"
+            onerror="this.remove()"
+          />
         </div>
-        <div class="marquee-item"><span class="mdot"></span>Miro</div>
-        <div class="marquee-item"><span class="mdot"></span>Tests UX</div>
-        <div class="marquee-item"><span class="mdot"></span>Affinity</div>
-        <div class="marquee-item"><span class="mdot"></span>Notion</div>
-        <div class="marquee-item"><span class="mdot"></span>Figma</div>
-        <div class="marquee-item"><span class="mdot"></span>UI/UX Design</div>
-        <div class="marquee-item"><span class="mdot"></span>Graphic Design</div>
-        <div class="marquee-item"><span class="mdot"></span>Photoshop</div>
-        <div class="marquee-item"><span class="mdot"></span>Illustrator</div>
-        <div class="marquee-item"><span class="mdot"></span>InDesign</div>
-        <div class="marquee-item">
-          <span class="mdot"></span>HTML · CSS · JS
-        </div>
-        <div class="marquee-item"><span class="mdot"></span>Miro</div>
-        <div class="marquee-item"><span class="mdot"></span>Tests UX</div>
-        <div class="marquee-item"><span class="mdot"></span>Affinity</div>
-        <div class="marquee-item"><span class="mdot"></span>Notion</div>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════════════
-     À PROPOS
-══════════════════════════════════════════════ -->
-    <section class="section about-section" id="apropos">
-      <!-- Parallax checker layer -->
-      <div class="about-checker" aria-hidden="true"></div>
-
-      <div class="about-inner">
-        <!-- LEFT -->
-        <div class="reveal-left">
-          <div class="about-label">
-            <svg width="22" height="28" viewBox="0 0 42 52" aria-hidden="true">
-              <use href="#flame-icon" />
-            </svg>
-            <span class="about-label-text">À propos</span>
-          </div>
-
-          <p class="about-p">
-            Designer UI/UX &amp; Graphic, avec
-            <strong>2 ans d'expérience</strong>, 6 mois en intégration web. Une
-            approche centrée utilisateur pour des
-            <strong>interfaces simples et efficaces</strong>.
+        <div class="rv">
+          <div class="lb">(02) — À propos</div>
+          <h2>Un design centré sur l'utilisateur.</h2>
+          <p class="lead" style="max-width: 520px">
+            Je suis Myari Nasandratra, UI/UX & Graphic Designer basé à
+            Antananarivo, avec
+            <b style="color: var(--w)">3 ans d'expérience</b>. Je conçois des
+            interfaces simples et efficaces, puis des identités visuelles qui
+            les prolongent.
           </p>
-          <p class="about-p">
+          <p class="lead" style="margin-top: -8px; max-width: 520px">
             J'allie UX Research et design visuel pour créer des produits faciles
-            à utiliser — clairs, fonctionnels et visuellement cohérents.
+            à utiliser : clairs, fonctionnels et visuellement cohérents.
           </p>
 
+          <div class="ab-b">
+            <a
+              class="pill"
+              href="assets/cv/CV_Nasandratra_Andriankotomiarintsoa.pdf"
+              target="_blank"
+              rel="noopener"
+              download="CV-Myari-Nasandratra.pdf"
+            >
+              Télécharger mon CV <i>↓</i>
+            </a>
+
+            <a class="gh" href="#contact">Me contacter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="services">
+      <div class="c cen">
+        <div class="lb">(03) — Mes services</div>
+        <h2 class="rv">Ce que je fais<br />pour vous ✳</h2>
+        <div class="sv rv" id="sv" style="text-align: left">
+          <div>
+            <h3>Audit, Recherche UX & Stratégie</h3>
+            <p>
+              Comprendre les besoins et le comportement des utilisateurs avant
+              de dessiner la moindre interface.
+            </p>
+          </div>
+          <div class="hl">
+            <h3>UI Design & Prototype</h3>
+            <p>
+              Maquettes soignées et prototypes interactifs sur Figma, prêts à
+              être validés.
+            </p>
+          </div>
+          <div>
+            <h3>Identité visuelle & Branding</h3>
+            <p>
+              Logos, chartes graphiques et supports cohérents avec votre image.
+            </p>
+          </div>
+          <div>
+            <h3>Affiches & Print</h3>
+            <p>
+              Affiches, brochures et supports imprimés avec Illustrator,
+              Photoshop et InDesign.
+            </p>
+          </div>
+          <div>
+            <h3>Tests utilisateurs</h3>
+            <p>
+              Valider les parcours avec de vrais utilisateurs pour corriger
+              avant de lancer.
+            </p>
+          </div>
+          <div>
+            <h3>Direction visuelle</h3>
+            <p>
+              Une cohérence de couleurs, de typographies et de composants sur
+              tous vos supports.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="outils" style="padding-top: 0">
+      <div class="c tl">
+        <div class="rv">
+          <div class="lb">(04) — Outils & Compétences</div>
+          <h2>Ma boîte à outils créative</h2>
+          <p class="lead">
+            Designer UI/UX & Graphic avec <b>3 ans d'expérience</b>. J'allie UX
+            Research et design visuel pour créer des produits faciles à
+            utiliser.
+          </p>
           <a
-            href="/CV Andriankotmiarintsoa.pdf"
-            class="cv-btn"
-            target="_blank"
-            rel="noopener"
+            class="pill"
+            href="assets/cv/CV-Myari-Nasandratra.pdf"
+            download="CV-Myari-Nasandratra.pdf"
+            >Voir mon CV <i>↓</i></a
           >
-            Voir mon CV
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M7 17L17 7M17 7H7M17 7v10" />
-            </svg>
-          </a>
-
-          <div class="about-stats reveal" data-delay=".15">
-            <div class="stat-cell">
-              <span class="stat-num">2+</span>
-              <span class="stat-lbl">Ans UI/UX</span>
-            </div>
-            <div class="stat-cell">
-              <span class="stat-num">6</span>
-              <span class="stat-lbl">Mois Web</span>
-            </div>
-            <div class="stat-cell">
-              <span class="stat-num">10+</span>
-              <span class="stat-lbl">Outils</span>
-            </div>
-          </div>
         </div>
-
-        <!-- RIGHT: Skills -->
-        <div class="reveal-right" data-delay=".1">
-          <p class="skills-label">Outils &amp; Tech maîtrisés</p>
-          <div class="skills-cloud stagger">
-            <span class="skill-pill">Photoshop</span>
-            <span class="skill-pill">Miro</span>
-            <span class="skill-pill">Figma</span>
-            <span class="skill-pill">InDesign</span>
-            <span class="skill-pill">Tests UX</span>
-            <span class="skill-pill">Gemini AI</span>
-            <span class="skill-pill">Notion</span>
-            <span class="skill-pill">Affinity</span>
-            <span class="skill-pill">Illustrator</span>
-            <span class="skill-pill">HTML / CSS</span>
-            <span class="skill-pill">JavaScript</span>
+        <div class="tls rv">
+          <div>
+            <b>Fg</b
+            ><span
+              ><h3>Figma</h3>
+              <p>
+                Maquettes, systèmes de composants et prototypes interactifs.
+              </p></span
+            >
+          </div>
+          <div>
+            <b>Ps</b
+            ><span
+              ><h3>Photoshop, Illustrator & InDesign</h3>
+              <p>
+                Retouche, illustration, mise en page et supports de marque.
+              </p></span
+            >
+          </div>
+          <div>
+            <b>Mi</b
+            ><span
+              ><h3>Miro</h3>
+              <p>
+                Ateliers, parcours utilisateurs et architecture d'information.
+              </p></span
+            >
+          </div>
+          <div>
+            <b>Af</b
+            ><span
+              ><h3>Affinity & Notion</h3>
+              <p>
+                Création graphique alternative et organisation des projets.
+              </p></span
+            >
+          </div>
+          <div>
+            <b>&lt;/&gt;</b
+            ><span
+              ><h3>HTML · CSS · JS</h3>
+              <p>
+                Comprendre le code pour concevoir des interfaces réalistes.
+              </p></span
+            >
+          </div>
+          <div>
+            <b>AI</b
+            ><span
+              ><h3>Gemini AI</h3>
+              <p>Accélérer la recherche, les idées et les contenus.</p></span
+            >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════
-     PROJETS
-══════════════════════════════════════════════ -->
-    <section class="section projects-section" id="projets">
-      <!-- Parallax checker -->
-      <div class="proj-checker" aria-hidden="true"></div>
+    <div class="tk" aria-hidden="true"><div class="tr" id="t2"></div></div>
 
-      <div class="projects-header">
-        <div class="projects-header-left reveal">
-          <p class="eyebrow">Projets</p>
-          <h2 class="section-title">
-            Mon <em>travail</em>
-            <svg
-              width="22"
-              height="28"
-              viewBox="0 0 42 52"
-              style="
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 0.4rem;
-              "
-              aria-hidden="true"
-            >
-              <use href="#flame-icon" />
-            </svg>
-          </h2>
+    <section id="process">
+      <div class="c">
+        <div class="lb rv">(05) — Mon process</div>
+        <h2 class="rv">Comment je travaille</h2>
+        <div style="margin-top: 60 px">
+          <div class="st rv">
+            <span>Recherche</span><b>/01</b>
+            <div>
+              <h3>Comprendre avant de concevoir</h3>
+              <ul>
+                <li>
+                  <b>Brief & cadrage :</b> objectifs, audience, contraintes
+                </li>
+                <li><b>Analyse :</b> usages et opportunités du marché</li>
+              </ul>
+            </div>
+            <em>1-2 jours</em>
+          </div>
+          <div class="st rv">
+            <span>Architecture UX</span><b>/02</b>
+            <div>
+              <h3>Structurer le parcours</h3>
+              <ul>
+                <li><b>Sitemap :</b> la logique de navigation</li>
+                <li>
+                  <b>Wireframes :</b> la structure validée avant le design
+                </li>
+              </ul>
+            </div>
+            <em>3-5 jours</em>
+          </div>
+          <div class="st rv">
+            <span>Design</span><b>/03</b>
+            <div>
+              <h3>Donner forme à l'expérience</h3>
+              <ul>
+                <li><b>Design UI :</b> couleurs, typographies, composants</li>
+                <li>
+                  <b>Prototype :</b> pour valider l'expérience avant la
+                  livraison
+                </li>
+              </ul>
+            </div>
+            <em>5-7 jours</em>
+          </div>
+          <div class="st rv">
+            <span>Tests</span><b>/04</b>
+            <div>
+              <h3>Valider et ajuster</h3>
+              <ul>
+                <li><b>Tests UX :</b> retours de vrais utilisateurs</li>
+                <li><b>Livraison :</b> fichiers propres et organisés</li>
+              </ul>
+            </div>
+            <em>2-3 jours</em>
+          </div>
         </div>
-        <div class="projects-divider reveal" data-delay=".2"></div>
-      </div>
-
-      <div class="projects-grid stagger">
-        <!-- Card 1 — UI/UX -->
-        <a
-          href="https://www.behance.net/nasandrandrian1"
-          target="_blank"
-          rel="noopener"
-          class="proj-card"
-          aria-label="Voir les projets UI/UX Design sur Behance"
-        >
-          <div class="proj-img">
-            <img
-              src=img/Testimonial_left_side.jpg
-              alt="UI/UX — wireframes, prototypage, design d'interface"
-              loading="lazy"
-            />
-            <div class="proj-img-overlay"></div>
-            <span class="proj-img-badge">UI/UX Design</span>
-            <div class="proj-stripe"></div>
+        <div class="nb rv">
+          <div>
+            <b>10+</b><span>Outils<br />maîtrisés</span>
           </div>
-          <div class="proj-body">
-            <div>
-              <h3 class="proj-title">UI/UX</h3>
-              <p class="proj-sub">Figma · Prototypage · UX Research</p>
-            </div>
-            <span class="proj-discover"
-              >Découvrir <span class="arr">→</span></span
-            >
+          <div>
+            <b>3+</b><span>années<br />d'expérience</span>
           </div>
-        </a>
-
-        <!-- Card 2 — Graphic Design -->
-        <a
-          href="https://www.behance.net/nasandrmiarint"
-          target="_blank"
-          rel="noopener"
-          class="proj-card"
-          aria-label="Voir les projets Graphic Design sur Behance"
-        >
-          <div class="proj-img">
-            <img
-              src=img/Testimonial_right_side.jpg
-              alt="Graphic Design — identités visuelles, affiches, branding"
-              loading="lazy"
-            />
-            <div class="proj-img-overlay"></div>
-            <span class="proj-img-badge">Graphic Design</span>
-            <div class="proj-stripe"></div>
+          <div>
+            <b>2</b><span>Disciplines<br />UI/UX & Graphic</span>
           </div>
-          <div class="proj-body">
-            <div>
-              <h3 class="proj-title">Graphic Design</h3>
-              <p class="proj-sub">Illustrator · Photoshop · InDesign</p>
-            </div>
-            <span class="proj-discover"
-              >Découvrir <span class="arr">→</span></span
-            >
-          </div>
-        </a>
+        </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════
-     CONTACT
-══════════════════════════════════════════════ -->
-    <section class="section contact-section" id="contact">
-      <!-- Parallax checker -->
-      <div class="contact-checker" aria-hidden="true"></div>
+    <section class="light" id="faq">
+      <div class="c cen">
+        <div class="lb">(06) — FAQ</div>
+        <h2>Des questions ?</h2>
+        <div class="fq" style="text-align: left">
+          <details>
+            <summary>Comment gérez-vous les retours et révisions ?</summary>
+            <p>
+              Chaque étape est validée avec vous avant de passer à la suivante.
+              Les retours sont intégrés directement dans les maquettes.
+            </p>
+          </details>
+          <details>
+            <summary>Quels outils utilisez-vous ?</summary>
+            <p>
+              Figma pour l'interface, Illustrator, Photoshop et InDesign pour le
+              graphisme, Miro pour la recherche.
+            </p>
+          </details>
+          <details>
+            <summary>Que recevrai-je à la fin du projet ?</summary>
+            <p>
+              Des fichiers organisés et prêts à l'emploi : maquettes, prototype
+              et supports exportés dans les bons formats.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
 
-      <div class="contact-inner">
-        <!-- LEFT: Links -->
-        <div class="reveal-left">
-          <div class="contact-links-col stagger">
+    <div class="tk" aria-hidden="true"><div class="tr" id="t3"></div></div>
+
+    <div class="top">
+      <span
+        ><i style="color: var(--l)">●</i> Disponible pour de nouveaux
+        projets</span
+      ><a href="#top" aria-label="Haut de page">↑</a>
+    </div>
+    <section id="contact">
+      <div class="c ct">
+        <div class="rv">
+          <h2>Créons quelque chose de mémorable.</h2>
+          <p class="lead">Transformons votre vision en impact réel.</p>
+        </div>
+        <div class="rv">
+          <div class="me">
+            <img src="assets/img/Artboard2.svg" alt="Myari Nasandratra" /><span
+              ><b>Myari Nasandratra</b
+              ><small>UI/UX & Graphic Designer · Antananarivo</small></span
+            >
+          </div>
+          <div class="soc">
             <a
               href="https://www.linkedin.com/in/nasandratra-andriankotomiarintsoa-115206358/"
               target="_blank"
               rel="noopener"
-              class="contact-link-item"
-            >
-              <div class="cli">in</div>
-              LinkedIn
-            </a>
-
-            <a
+              >in</a
+            ><a
               href="https://github.com/Myarinasandratra-dev"
               target="_blank"
               rel="noopener"
-              class="contact-link-item"
-            >
-              <div class="cli">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
-                  />
-                </svg>
-              </div>
-              Github
-            </a>
-
-            <a
-              href="https://wa.me/261345685692"
+              >Git</a
+            ><a
+              href="https://www.behance.net/nasandrandrian1"
               target="_blank"
               rel="noopener"
-              class="contact-link-item"
+              >Bē</a
+            ><a href="https://wa.me/261345685692" target="_blank" rel="noopener"
+              >WA</a
             >
-              <div class="cli">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.309A9.942 9.942 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
-                  />
-                </svg>
-              </div>
-              WhatsApp
-            </a>
-
-            <div
-              class="contact-link-item"
-              style="cursor: default; pointer-events: none"
-            >
-              <div class="cli">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01-.004 1.103a2 2 0 011.997-2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"
-                  />
-                </svg>
-              </div>
-              +261 34 56 856 92
-            </div>
-
-            <div
-              class="contact-link-item"
-              style="cursor: default; pointer-events: none"
-            >
-              <div class="cli">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </div>
-              andriankotomiariantsoa24@gmail.com
-            </div>
           </div>
-        </div>
-
-        <!-- RIGHT: CTA -->
-        <div class="contact-right reveal-right" data-delay=".15">
-          <h2 class="contact-cta-title">
-            Intéressé par<br />mon travail ?<br />
-            <em>Discutons</em> ensemble.
-          </h2>
-
+          <small style="color: var(--g); font-size: 11px"
+            >Discutons de votre projet</small
+          >
+          <a class="mail" href="mailto:andriankotomiariantsoa24@gmail.com"
+            >andriankotomiariantsoa24@gmail.com</a
+          >
+          <p class="lead" style="margin-top: 0">
+            Une vision ? Je la rends réelle. Designer
+            <b style="color: var(--w)">rigoureux et à votre écoute</b>. +261 34
+            56 856 92
+          </p>
           <a
+            class="pill"
             href="https://wa.me/261345685692?text=Bonjour,%20je%20souhaite%20plus%20d'informations"
             target="_blank"
             rel="noopener"
-            class="wa-btn"
+            >Me contacter sur WhatsApp <i>↗</i></a
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.309A9.942 9.942 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
-              />
-            </svg>
-            Me contacter sur WhatsApp ↗
-          </a>
-
-          <div class="avail-badge">
-            <div class="avail-dot"></div>
-            Disponible immédiatement
-          </div>
         </div>
       </div>
     </section>
-
-    <!-- ══ FOOTER ════════════════════════════════════ -->
-    <div class="footer-bar">
-      <span class="footer-copy">MN.CREATIVE © 2026 — Myari Nasandratra</span>
-
-      <div class="footer-socials">
-        <a
-          href="https://www.linkedin.com/in/nasandratra-andriankotomiarintsoa-115206358/"
-          target="_blank"
-          rel="noopener"
-          class="soc-link"
-          aria-label="LinkedIn"
-          >in</a
-        >
-
-        <a
-          href="https://github.com/Myarinasandratra-dev"
-          target="_blank"
-          rel="noopener"
-          class="soc-link"
-          aria-label="GitHub"
-        >
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
-            />
-          </svg>
-        </a>
-
-        <a
-          href="https://wa.me/261345685692"
-          target="_blank"
-          rel="noopener"
-          class="soc-link"
-          aria-label="WhatsApp"
-        >
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.309A9.942 9.942 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
-            />
-          </svg>
-        </a>
-
-        <a
-          href="https://www.behance.net/nasandrandrian1"
-          target="_blank"
-          rel="noopener"
-          class="soc-link"
-          aria-label="Behance"
-          >Bē</a
+    <footer>
+      <div class="c">
+        <span class="lg"
+          ><img
+            src="assets/img/Artboard2.svg"
+            alt=""
+            width="28"
+            height="28"
+          />Myari</span
+        ><span
+          >MN.CREATIVE © 2026 Myari Nasandratra, UI/UX & Graphic Designer</span
         >
       </div>
+    </footer>
 
-      <button
-        class="back-top"
-        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        aria-label="Retour en haut de page"
-      >
-        ↑ Retour en haut
-      </button>
-    </div>
-
-    <script src="main.js"></script>
+    <div class="cur" id="cur"></div>
+    <script src="js/main.js"></script>
   </body>
 </html>
