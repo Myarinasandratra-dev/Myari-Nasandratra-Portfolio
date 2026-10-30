@@ -63,3 +63,47 @@ const toolsObs = new IntersectionObserver(
 );
 
 tools.forEach((el) => toolsObs.observe(el));
+
+/* ===== Effet parallax sur les blobs liquides de chaque section ===== */
+(() => {
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const nodes = [...document.querySelectorAll("[data-parallax]")];
+  if (!nodes.length || reduceMotion) return;
+
+  const items = nodes.map((el) => ({
+    el,
+    speed: parseFloat(el.dataset.parallax) || 0,
+  }));
+
+  let ticking = false;
+
+  function update() {
+    const vh = innerHeight;
+    for (const { el, speed } of items) {
+      const r = el.parentElement.getBoundingClientRect();
+      const centerOffset = r.top + r.height / 2 - vh / 2;
+      el.style.transform = `translate3d(0, ${(-centerOffset * speed).toFixed(2)}px, 0)`;
+    }
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onScroll);
+  update();
+
+  // Si Lenis (smooth-scroll.js) est actif, on se branche aussi sur son
+  // propre évènement "scroll" pour rester parfaitement synchronisé pendant
+  // l'inertie du défilement (même frame, sans attendre l'évènement natif).
+  function bindLenis(lenis) {
+    lenis.on("scroll", onScroll);
+  }
+  if (window.__lenis) bindLenis(window.__lenis);
+  else addEventListener("lenis:ready", (e) => bindLenis(e.detail), { once: true });
+})();

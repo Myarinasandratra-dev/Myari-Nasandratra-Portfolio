@@ -18,6 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Quand Lenis a pris le contrôle du scroll (classe ajoutée sur <html>),
+   on désactive le smooth-scroll natif pour éviter tout conflit d'easing
+   avec l'inertie gérée en JS. */
+html.lenis {
+  scroll-behavior: auto;
+}
+
 body {
   font:
     400 16px/1.6 "Manrope",
@@ -54,6 +61,16 @@ a {
   border-radius: 99px;
   font-weight: 600;
   font-size: 15px;
+  transition:
+    background 0.3s var(--e),
+    box-shadow 0.3s var(--e),
+    transform 0.3s var(--e);
+}
+
+.pill:hover {
+  background: #fff6b0;
+  box-shadow: 0 0 0 6px rgba(232, 240, 84, 0.25);
+  transform: translateY(-2px);
 }
 
 .pill i {
@@ -78,9 +95,25 @@ nav {
   left: 0;
   right: 0;
   z-index: 20;
+  color: var(--k);
+}
+
+/* Le flou "verre dépoli" est posé sur un pseudo-élément plutôt que sur `nav`
+   directement : un backdrop-filter (comme un transform/filter) sur un
+   ancêtre crée un nouveau "containing block" pour tous ses descendants en
+   position: fixed. Comme le panneau du menu mobile (.nl) est fixed et
+   enfant de nav, il se retrouvait positionné par rapport à nav (haut de
+   64px) au lieu du viewport entier, et s'écrasait sur une hauteur quasi
+   nulle en laissant transparaître le contenu derrière lui. En déplaçant le
+   flou sur ::before (qui n'est pas un ancêtre de .nl), nav redevient un
+   élément "neutre" et .nl se positionne correctement sur tout l'écran. */
+nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(243, 243, 241, 0.8);
   backdrop-filter: blur(14px);
-  color: var(--k);
 }
 
 nav .c {
@@ -120,13 +153,110 @@ nav .c {
 
 .nl {
   display: flex;
-  gap: 36px;
+  align-items: center;
+  gap: 24px;
   font-size: 14px;
   font-weight: 500;
 }
 
+.nl a {
+  position: relative;
+  transition: color 0.25s var(--e);
+}
+
+.nl a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: var(--l);
+  transition: right 0.3s var(--e);
+}
+
 .nl a:hover {
-  opacity: 0.55;
+  color: #b6a800;
+}
+
+.nl a:hover::after {
+  right: 0;
+}
+
+/* ===== Sélecteur de langue FR / EN ===== */
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.lang-btn {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 4px 11px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    background 0.25s var(--e),
+    color 0.25s var(--e),
+    border-color 0.25s var(--e);
+}
+
+.lang-btn:hover {
+  border-color: var(--l);
+  color: #b6a800;
+}
+
+.lang-btn.is-active {
+  background: var(--l);
+  border-color: var(--l);
+  color: var(--k);
+}
+
+/* ===== Menu mobile (hamburger) ===== */
+.nav-toggle {
+  display: none;
+  position: relative;
+  z-index: 21;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  flex: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--k);
+  border-radius: 2px;
+  transition:
+    transform 0.3s var(--e),
+    opacity 0.3s var(--e);
+}
+
+.nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* hero */
@@ -139,6 +269,160 @@ nav .c {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+/* ===== Liquid blobs (effet liquide animé) =====
+   Structure: .liquid-blob (positionné, déplacé par le parallax JS via
+   style.transform) > ::before (forme, flou, animation liquide). On sépare
+   les deux pour que l'animation CSS ne vienne pas écraser la translation
+   inline posée par le parallax (l'animation a priorité sur style.transform
+   si elles portent sur le même élément). */
+.liquid-blob {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.liquid-blob::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: blur(40px);
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  background: linear-gradient(135deg, var(--l), #fff6b0 55%, var(--l));
+  animation:
+    liquidMorph 14s ease-in-out infinite,
+    liquidDrift 18s ease-in-out infinite;
+  will-change: transform, border-radius;
+}
+
+.hero .liquid-blob {
+  width: 540px;
+  height: 540px;
+  mix-blend-mode: multiply;
+}
+
+.hero .lb-a {
+  top: -160px;
+  right: -120px;
+}
+
+.hero .lb-a::before {
+  opacity: 0.6;
+}
+
+.hero .lb-b {
+  width: 380px;
+  height: 380px;
+  bottom: -140px;
+  left: -100px;
+}
+
+.hero .lb-b::before {
+  opacity: 0.4;
+  animation-duration:
+    17s,
+    22s;
+  animation-delay: -4s;
+}
+
+@keyframes liquidMorph {
+  0%,
+  100% {
+    border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+  }
+  25% {
+    border-radius: 58% 42% 35% 65% / 60% 55% 45% 40%;
+  }
+  50% {
+    border-radius: 65% 35% 45% 55% / 35% 60% 40% 65%;
+  }
+  75% {
+    border-radius: 35% 65% 55% 45% / 55% 35% 65% 40%;
+  }
+}
+
+@keyframes liquidDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, 3%, 0) scale(1.06);
+  }
+}
+
+/* Blobs décoratifs réutilisés sur les sections suivantes */
+section.has-liquid {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Le contenu doit toujours rester au-dessus des blobs liquides */
+.hero > .c,
+section.has-liquid > .c {
+  position: relative;
+  z-index: 1;
+}
+
+.liquid-blob.size-lg {
+  width: 460px;
+  height: 460px;
+}
+
+.liquid-blob.size-md {
+  width: 320px;
+  height: 320px;
+}
+
+.liquid-blob.pos-tr {
+  top: -140px;
+  right: -120px;
+}
+
+.liquid-blob.pos-bl {
+  bottom: -120px;
+  left: -140px;
+}
+
+.liquid-blob.pos-br {
+  bottom: -110px;
+  right: -140px;
+}
+
+.liquid-blob.tint-yellow::before {
+  background: linear-gradient(135deg, var(--l), #fff6b0 55%, var(--l));
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
+.liquid-blob.light-blob::before {
+  opacity: 0.45;
+  mix-blend-mode: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-blob::before {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .liquid-blob.size-lg,
+  .liquid-blob.size-md,
+  .hero .liquid-blob {
+    width: 260px;
+    height: 260px;
+  }
+
+  .liquid-blob.size-lg::before,
+  .liquid-blob.size-md::before,
+  .hero .liquid-blob::before {
+    filter: blur(26px);
+  }
 }
 
 .hero .c {
@@ -332,6 +616,8 @@ h1 .w b {
 }
 
 .sc {
+  position: relative;
+  z-index: 1;
   text-align: center;
   font-size: 12px;
   font-weight: 500;
@@ -461,11 +747,14 @@ h2 {
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--line);
-  transition: background 0.4s;
+  transition:
+    background 0.4s,
+    box-shadow 0.4s var(--e);
 }
 
 .pj:hover {
   background: var(--k2);
+  box-shadow: inset 0 3px 0 var(--l);
 }
 
 .pj small {
@@ -909,6 +1198,14 @@ details p {
   color: var(--k);
   display: grid;
   place-items: center;
+  transition:
+    background 0.3s var(--e),
+    transform 0.3s var(--e);
+}
+
+.top a:hover {
+  background: var(--l);
+  transform: translateY(-3px);
 }
 
 footer {
@@ -982,6 +1279,9 @@ footer .c {
   font-size: 15px;
   border-bottom: 2px solid var(--l);
   padding-bottom: 2px;
+  transition:
+    background 0.3s var(--e),
+    color 0.3s var(--e);
 }
 
 .gh:hover {
@@ -999,8 +1299,57 @@ footer .c {
     max-width: 340px;
   }
 
+  .nav-toggle {
+    display: flex;
+  }
+
   .nl {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 19;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--w);
+    padding: 20px 28px 28px;
+    transform: translateX(100%);
+    transition: transform 0.4s var(--e);
+    overflow-y: auto;
+  }
+
+  .nl.is-open {
+    transform: translateX(0);
+  }
+
+  /* :not(.pill) : le bouton "Contact me" est aussi un <a>, mais il doit
+     garder son display: inline-flex (texte + icône côte à côte) hérité de
+     .pill. Sans cette exclusion, display:block écrase le flex et fait
+     tomber l'icône ronde sous le texte. */
+  .nl a:not(.pill) {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 17px;
+  }
+
+  .nl a::after {
     display: none;
+  }
+
+  .nl .lang-switch {
+    margin-top: 22px;
+  }
+
+  .nl .pill {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 22px;
+    font-size: 17px;
+    padding: 8px 8px 8px 24px;
   }
 
   .pg,

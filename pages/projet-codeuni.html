@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeUni, site web d'agence digitale | Myari Nasandratra</title>
+    <meta
+      name="description"
+      content="Étude de cas : CodeUni, un site vitrine éditorial, radical et rapide pour une agence qui réunit création web, design et contenu."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Artboard.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <noscript
+      ><style>
+        .rv {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+    <link rel="stylesheet" href="../css/projet-codeuni.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="c">
+        <a href="../index.html">
+          <img
+            src="../assets/img/Artboard.svg"
+            alt="Accueil"
+            width="28"
+            height="28"
+          />
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nl" id="navLinks">
+          <a href="../index.html#projets" data-i18n="nav.projects">Mes projets</a
+          ><a href="../index.html#apropos" data-i18n="nav.about">À propos</a
+          ><a href="../index.html#process" data-i18n="nav.process">Mon process</a>
+          <div class="lang-switch">
+            <button class="lang-btn" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="pill" href="../index.html#contact" data-i18n="nav.contact" data-i18n-html
+            >Me contacter <i>↗</i></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero cs-hero" id="top">
+      <div class="c">
+        <a class="back" href="../index.html#projets" data-i18n="cu.back">← Tous les projets</a>
+        <h1 data-i18n="cu.h1" data-i18n-html>CodeUni, <em>site web d'agence digitale</em></h1>
+        <p class="sub" data-i18n="cu.sub">
+          Un site vitrine éditorial, radical et rapide pour une agence qui
+          réunit création web, design et contenu.
+        </p>
+        <div class="meta">
+          <div><small data-i18n="cu.meta.client.l">Client</small><b data-i18n="cu.meta.client.v">CodeUni, agence digitale</b></div>
+          <div><small data-i18n="cu.meta.type.l">Type de projet</small><b data-i18n="cu.meta.type.v">Site vitrine</b></div>
+          <div><small data-i18n="cu.meta.role.l">Rôle</small><b>UI/UX Design</b></div>
+          <div>
+            <small data-i18n="cu.meta.pages.l">Pages conçues</small
+            ><b data-i18n="cu.meta.pages.v">Accueil, Pourquoi nous, Portfolio, Détail projet</b>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="projet">
+      <div class="c" id="pin">
+        <div class="two pin-in">
+          <div class="rv">
+            <div class="lb" data-i18n="cu.project.label">Le projet</div>
+            <h2 data-i18n="cu.project.title">Montrer le savoir-faire dès la première seconde.</h2>
+            <h3 data-i18n="cu.project.context.title">Le contexte</h3>
+            <p data-i18n="cu.project.context.text">
+              CodeUni accompagne les entreprises sur trois expertises : la
+              création de site web, le design graphique et UI/UX, et la création
+              de contenu.
+            </p>
+            <h3 data-i18n="cu.project.goal.title">L'objectif</h3>
+            <p data-i18n="cu.project.goal.text">
+              Concevoir un site qui incarne ce positionnement : une seule
+              équipe, un seul interlocuteur, et une interface qui prouve le
+              travail avant même de l'expliquer.
+            </p>
+          </div>
+          <div class="scr rv">
+            <div class="scr-b">
+              <i></i><i></i><i></i><span>codeuni.mg</span>
+            </div>
+            <div class="scr-w">
+              <div
+                class="scr-v"
+                id="scr"
+                tabindex="0"
+                role="region"
+                aria-label="Page d'accueil CodeUni, à faire défiler"
+              >
+                <img
+                  src="../assets/img/codeuni/codeuni-page-d-accueil-complete-du-site.jpg"
+                  width="455"
+                  height="2576"
+                  alt="Page d'accueil complète du site CodeUni : titre, services, projets, arguments et appel final"
+                />
+              </div>
+              <span class="scr-h" id="scrh" data-i18n="cu.scrollhint">Faites défiler ↓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="direction">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="cu.direction.label">Direction visuelle</div>
+          <h2 data-i18n="cu.direction.title" data-i18n-html>Éditorial, radical,<br />sans détour.</h2>
+          <p class="lead" data-i18n="cu.direction.lead">
+            Un titre massif en capitales condensées, un bleu électrique sur fond
+            papier ou noir, et du mouvement là où il guide la lecture.
+          </p>
+        </div>
+        <div class="dir rv">
+          <div>
+            <h3 data-i18n="cu.direction.palette.title">Palette</h3>
+            <div class="sw">
+              <i style="background: #1a2bff"><span data-i18n="cu.direction.palette.blue">Bleu</span></i>
+              <i style="background: #181818"><span data-i18n="cu.direction.palette.black">Noir</span></i>
+              <i style="background: #f1f1f1"><span data-i18n="cu.direction.palette.paper">Papier</span></i>
+            </div>
+            <p data-i18n="cu.direction.palette.text">
+              Le bleu ne sert qu'aux appels à l'action, aux numéros et aux mots
+              qui comptent.
+            </p>
+          </div>
+          <div>
+            <h3 data-i18n="cu.direction.type.title">Typographie</h3>
+            <div class="tp" data-i18n="cu.direction.type.sample">Grandir en ligne</div>
+            <p data-i18n="cu.direction.type.text">
+              Capitales condensées pour l'impact, texte courant sobre pour la
+              lecture.
+            </p>
+          </div>
+          <div>
+            <h3 data-i18n="cu.direction.rhythm.title">Rythme</h3>
+            <p data-i18n="cu.direction.rhythm.text">
+              Alternance de sections claires et sombres, bandeau défilant des
+              expertises et blocs en damier pour casser la grille.
+            </p>
+          </div>
+        </div>
+        <a
+          class="fr strip rv"
+          href="../assets/img/codeuni/barr.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="../assets/img/codeuni/barr.jpg"
+            alt="Bandeau bleu défilant : stratégie, sites web, design UI/UX, identité visuelle, contenu"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section id="pages">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="cu.pages.label">Les pages</div>
+          <h2 data-i18n="cu.pages.title">Quatre pages, un seul fil.</h2>
+        </div>
+        <div class="pgs">
+          <article class="pgb rv">
+            <span class="tag" data-i18n="cu.pages.home.tag">Accueil</span>
+            <h3 data-i18n="cu.pages.home.title">Dire l'essentiel, puis prouver.</h3>
+            <p data-i18n="cu.pages.home.text">
+              Un titre qui annonce la promesse, trois services listés comme un
+              sommaire, puis les projets filtrables et un appel final.
+            </p>
+            <div class="hero-acc">
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Accuiel-hero.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Accuiel-hero.jpg"
+                    alt="Section Services : création de site web, design et UI/UX, création de contenu"
+                    loading="lazy"
+                /></a>
+                <figcaption></figcaption>
+              </figure>
+            </div>
+            <div class="fg c3">
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/acc-services.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/services.jpg"
+                    alt="Section Services : création de site web, design et UI/UX, création de contenu"
+                    loading="lazy"
+                /></a>
+                <figcaption>Services en lignes numérotées</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/acc-projets.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Sevicefiltre.jpg"
+                    alt="Section « Des projets pensés pour durer » avec filtres Site Web, Design, Contenu"
+                    loading="lazy"
+                /></a>
+                <figcaption>Projets avec filtres par service</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/acc-equipe.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/codeuni-acc-equipe.jpg"
+                    alt="Section « Une seule équipe, trois expertises » en trois cartes A, B, C"
+                    loading="lazy"
+                /></a>
+                <figcaption>Trois arguments en cartes A, B, C</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="pgb rv">
+            <span class="tag" data-i18n="cu.pages.expertise.tag">Expertise</span>
+            <h3 data-i18n="cu.pages.expertise.title">Trois métiers, une seule équipe.</h3>
+            <p data-i18n="cu.pages.expertise.text">
+              Chaque expertise a son bloc : un numéro, un texte court, la liste
+              des prestations et des mots-clés, avec une photo qui change de
+              côté d'une ligne à l'autre. Une FAQ répond aux questions courantes
+              avant le premier échange.
+            </p>
+            <div class="fg c2">
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Expertises.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Expertises.jpg"
+                    alt="Chiffres clés : 3 expertises, 48h de délai, 100% de sites optimisés, 1 interlocuteur"
+                    loading="lazy"
+                /></a>
+                <figcaption>En-tête de page</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Expertises2.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Expertises2.jpg"
+                    alt="Six raisons de nous confier votre projet, carrousel 01 sur 06"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  01 · Création de site web / 02 · Design et UI/UX / 03 ·
+                  Création de conten
+                </figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Expertises3.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Expertises3.jpg"
+                    alt="Comment on travaille : découverte, conception, réalisation, lancement et suivi"
+                    loading="lazy"
+                /></a>
+                <figcaption>Les questions auxquelles la page répond</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="pgb rv">
+            <span class="tag" data-i18n="cu.pages.why.tag">Pourquoi nous</span>
+            <h3 data-i18n="cu.pages.why.title">Rassurer avec des preuves simples.</h3>
+            <p data-i18n="cu.pages.why.text">
+              Des chiffres en tête de page, six raisons à parcourir une par une,
+              puis un process en quatre étapes illustrées.
+            </p>
+            <div class="fg c2">
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Pourquoi nous.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Pourquoi nous.jpg"
+                    alt="Chiffres clés : 3 expertises, 48h de délai, 100% de sites optimisés, 1 interlocuteur"
+                    loading="lazy"
+                /></a>
+                <figcaption>Chiffres clés</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Pourquoi nous (1).jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Pourquoi nous (1).jpg"
+                    alt="Six raisons de nous confier votre projet, carrousel 01 sur 06"
+                    loading="lazy"
+                /></a>
+                <figcaption>Six raisons, en carrousel</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Pourquoi nous (3).jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Pourquoi nous (3).jpg"
+                    alt="Comment on travaille : découverte, conception, réalisation, lancement et suivi"
+                    loading="lazy"
+                /></a>
+                <figcaption>Process en quatre étapes</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Pourquoi nous (2).jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Pourquoi nous (2).jpg"
+                    alt="Citation de l'équipe CodeUni sur fond sombre"
+                    loading="lazy"
+                /></a>
+                <figcaption>Citation de l'équipe</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="pgb rv">
+            <span class="tag" data-i18n="cu.pages.portfolio.tag">Portfolio</span>
+            <h3 data-i18n="cu.pages.portfolio.title">Une grille qui se filtre.</h3>
+            <p data-i18n="cu.pages.portfolio.text">
+              Chaque projet tient en une carte : visuel, service, titre, une
+              ligne de contexte. Les filtres réduisent la grille sans quitter la
+              page.
+            </p>
+            <div class="fg u">
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Detail - Portfolio (1).jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Detail - Portfolio (1).jpg"
+                    alt="Grille de projets filtrable par service : boutique en ligne, refonte de marque, application fintech, cabinet juridique"
+                    loading="lazy"
+                /></a>
+                <figcaption>Grille de projets et filtre par service</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="pgb rv">
+            <span class="tag" data-i18n="cu.pages.detail.tag">Détail projet</span>
+            <h3 data-i18n="cu.pages.detail.title">Une étude de cas lisible en trente secondes.</h3>
+            <p data-i18n="cu.pages.detail.text">
+              Fiche d'identité du projet (client, date, durée, rôle), menu
+              latéral, galerie d'écrans, puis les autres projets en carrousel.
+            </p>
+            <div class="fg c2">
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Detail - Portfolio (2).jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Detail - Portfolio (2).jpg"
+                    alt="Étude de cas boutique en ligne mode locale : titre et mockup ordinateur"
+                    loading="lazy"
+                /></a>
+                <figcaption>Titre et mockup</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Detail .jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Detail .jpg"
+                    alt="Fiche du projet : client, date, type, durée, rôle, site web"
+                    loading="lazy"
+                /></a>
+                <figcaption>Fiche d'identité du projet</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Detail - Portfolio (3)@2x.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Detail - Portfolio (3)@2x.jpg"
+                    alt="Menu latéral et galerie d'écrans du site e-commerce"
+                    loading="lazy"
+                /></a>
+                <figcaption>Menu latéral et galerie</figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="fr"
+                  href="../assets/img/codeuni/Detail - Portfolio (4).jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/codeuni/Detail - Portfolio (4).jpg"
+                    alt="Section « Les autres projets » : application fintech, calendrier éditorial, site de cabinet juridique"
+                    loading="lazy"
+                /></a>
+                <figcaption>Les autres projets</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="resultat">
+      <div class="c">
+        <div class="lb rv" data-i18n="cu.result.label">Ce que le site met en avant</div>
+        <h2 class="rv" data-i18n="cu.result.title" data-i18n-html>Des promesses<br />qu'on peut vérifier.</h2>
+        <div class="nb rv">
+          <div>
+            <b>3</b><span data-i18n="cu.result.stat1" data-i18n-html>Expertises<br />réunies</span>
+          </div>
+          <div style="color: #ffffff">
+            <b>48h</b>
+            <span data-i18n="cu.result.stat2" data-i18n-html>Délai de<br />première réponse</span>
+          </div>
+          <div>
+            <b>1</b><span data-i18n="cu.result.stat3" data-i18n-html>Interlocuteur,<br />du brief au lancement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tk" aria-hidden="true"><div class="tr" id="t1"></div></div>
+
+    <section id="contact">
+      <div class="c nx">
+        <div class="rv">
+          <h2 data-i18n="cu.contact.title" data-i18n-html>Un projet<br />en tête ?</h2>
+          <p class="lead" data-i18n="cu.contact.lead">
+            Parlons de votre site, de votre identité ou de vos contenus.
+          </p>
+        </div>
+        <div
+          class="rv"
+          style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap"
+        >
+          <a class="pill" href="../index.html#contact" data-i18n="nav.contact" data-i18n-html>Me contacter <i>↗</i></a>
+          <a class="gh" href="../index.html#projets" data-i18n="cu.contact.other">Voir les autres projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="c">
+        <span class="lg">Myari</span
+        ><span data-i18n="footer.text"
+          >MN.CREATIVE © 2026 Myari Nasandratra, UI/UX & Graphic Designer</span
+        >
+      </div>
+    </footer>
+
+    <script src="../js/i18n-codeuni.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/nav-mobile.js"></script>
+    <script src="../js/projet-codeuni.js"></script>
+  </body>
+</html>

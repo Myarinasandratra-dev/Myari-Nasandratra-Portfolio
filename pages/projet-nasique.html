@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nasique, application de streaming musical | Myari Nasandratra</title>
+    <meta
+      name="description"
+      content="Étude de cas UX/UI : Nasique, un concept d'application mobile de streaming musical pour une écoute plus personnelle, immersive et interactive."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Artboard.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <noscript
+      ><style>
+        .rv {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+    <link rel="stylesheet" href="../css/projet-nasique.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="c">
+        <a href="../index.html">
+          <img
+            src="../assets/img/Artboard.svg"
+            alt="Accueil"
+            width="28"
+            height="28"
+          />
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nl" id="navLinks">
+          <a href="../index.html#projets" data-i18n="nav.projects">Mes projets</a
+          ><a href="../index.html#apropos" data-i18n="nav.about">À propos</a
+          ><a href="../index.html#process" data-i18n="nav.process">Mon process</a>
+          <div class="lang-switch">
+            <button class="lang-btn" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="pill" href="../index.html#contact" data-i18n="nav.contact" data-i18n-html
+            >Me contacter <i>↗</i></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero cs-hero" id="top">
+      <div class="c">
+        <a class="back" href="../index.html#projets" data-i18n="nq.back">← Tous les projets</a>
+        <h1>Nasique</h1>
+        <p class="sub" data-i18n="nq.sub">
+          Application mobile de streaming musical. Un projet personnel pour une
+          écoute plus personnelle, immersive et interactive.
+        </p>
+        <div class="meta">
+          <div>
+            <small data-i18n="nq.meta.services.l">Services</small
+            ><b data-i18n="nq.meta.services.v">UX Design · Mobile UI Design · Product Design</b>
+          </div>
+          <div><small data-i18n="nq.meta.cat.l">Catégorie</small><b data-i18n="nq.meta.cat.v">Application mobile</b></div>
+          <div>
+            <small data-i18n="nq.meta.type.l">Type</small><b data-i18n="nq.meta.type.v">Projet personnel, concept sans client réel</b>
+          </div>
+          <div><small data-i18n="nq.meta.tools.l">Outils</small><b>Figma</b></div>
+        </div>
+      </div>
+    </header>
+
+    <section id="projet" class="pr0">
+      <div class="c">
+        <a
+          class="fr rv"
+          href="../assets/img/nasique/nasique.jpg"
+          target="_blank"
+          rel="noopener"
+          ><img src="../assets/img/nasique/nasique.jpg"
+        /></a>
+        <div class="nv rv">
+          <h3 data-i18n="nq.challenge.title">Le défi</h3>
+          <div>
+            <p class="ld" data-i18n="nq.challenge.lead">
+              Faire vivre la musique au-delà de la simple écoute, sans perdre
+              l'utilisateur.
+            </p>
+            <p data-i18n="nq.challenge.text">
+              Écouter, découvrir un artiste, chanter sur un titre, suivre un
+              live : ces gestes sont souvent répartis entre plusieurs
+              applications. Nasique les réunit au sein d'une interface cohérente
+              et intuitive. Le défi UX : simplifier la navigation musicale et
+              faciliter la découverte, malgré la richesse des fonctions.
+            </p>
+          </div>
+        </div>
+        <div class="nv rv">
+          <h3 data-i18n="nq.solution.title">La solution</h3>
+          <div>
+            <p class="ld" data-i18n="nq.solution.lead">
+              Une seule application, cinq onglets : Accueil, Suivi, Live, Radio,
+              Profil.
+            </p>
+            <p data-i18n="nq.solution.text">
+              Le parcours commence par deux choix personnels, les styles
+              musicaux puis au moins trois artistes préférés, pour que l'accueil
+              propose des suggestions dès la première écoute. Le lecteur place
+              la pochette dans un cercle de progression avec une bascule
+              écoute/micro. Le karaoké colore les paroles au fil du chant, le
+              live réunit l'artiste, ses invités et les commentaires, et la
+              radio FM se règle avec un cadran à faire glisser.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ecrans">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="nq.screens.label">Les écrans</div>
+          <h2 data-i18n="nq.screens.title" data-i18n-html>Du premier son<br />à la dernière note.</h2>
+        </div>
+        <div class="sh rv" id="sh">
+          <div class="sx">
+            <div class="cap" id="cap" aria-live="polite"></div>
+            <ol class="sl" id="sl"></ol>
+          </div>
+          <div class="pw">
+            <div class="ph2" id="ph" title="Cliquer pour l'écran suivant"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mq" aria-label="Tous les écrans de l'application">
+        <div class="mt" id="mt"></div>
+      </div>
+    </section>
+    <section class="light" id="resultat">
+      <div class="c">
+        <div class="nv rv" style="margin-top: 0">
+          <h3 data-i18n="nq.result.title">Le résultat</h3>
+          <div>
+            <p class="ld" data-i18n="nq.result.lead">
+              Une interface sombre et chaleureuse où la fonction créative reste
+              à un geste.
+            </p>
+            <p style="color: #555" data-i18n="nq.result.text">
+              La principale tension : garder une navigation simple tout en
+              ajoutant des fonctions riches. Je l'ai résolue avec une barre
+              d'onglets toujours visible, un jaune réservé aux actions
+              principales, et des écrans qui gardent la même structure : titre,
+              filtres, puis contenu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ux">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="nq.method.label">La méthode</div>
+          <h2 data-i18n="nq.method.title" data-i18n-html>Des étapes UX<br />au prototype.</h2>
+        </div>
+        <div class="ux">
+          <article class="rv">
+            <div>
+              <span class="n">1</span>
+              <h3 data-i18n="nq.method.s1.title">Discovery, comprendre le problème</h3>
+              <p class="ob" data-i18n="nq.method.s1.obj">
+                Comprendre les habitudes d'écoute et les difficultés
+                potentielles des utilisateurs.
+              </p>
+              <ul>
+                <li data-i18n="nq.method.s1.l1">Définir le contexte et le problème.</li>
+                <li data-i18n="nq.method.s1.l2">
+                  Étudier les applications concurrentes : Spotify, Deezer et
+                  YouTube Music.
+                </li>
+                <li data-i18n="nq.method.s1.l3">
+                  Identifier leurs points forts et les opportunités
+                  d'amélioration.
+                </li>
+                <li data-i18n="nq.method.s1.l4">Formuler des hypothèses à vérifier.</li>
+              </ul>
+            </div>
+            <div
+              class="fr bx"
+              role="img"
+              aria-label="Analyse des applications concurrentes et angle de Nasique"
+            >
+              <h4 data-i18n="nq.method.s1.box.title">Analyse des concurrents</h4>
+              <div class="cmp">
+                <div>
+                  <b>Spotify</b>
+                  <p data-i18n="nq.method.s1.box.spotify">Recommandations très personnalisées et playlists</p>
+                </div>
+                <div>
+                  <b>Deezer</b>
+                  <p data-i18n="nq.method.s1.box.deezer">Flow, paroles intégrées, découverte simple</p>
+                </div>
+                <div>
+                  <b>YouTube Music</b>
+                  <p data-i18n="nq.method.s1.box.ytmusic">Clips vidéo et très vaste catalogue</p>
+                </div>
+                <div class="ns">
+                  <b data-i18n="nq.method.s1.box.opp.title">Opportunité Nasique</b>
+                  <p data-i18n="nq.method.s1.box.opp.text">
+                    Réunir écoute, karaoké, live avec invités, radio FM et
+                    profil artiste dans une seule application
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">2</span>
+              <h3 data-i18n="nq.method.s2.title">User Research, recherche utilisateur</h3>
+              <p class="ob" data-i18n="nq.method.s2.obj">
+                Comprendre les besoins réels avant de dessiner les écrans.
+              </p>
+              <ul>
+                <li data-i18n="nq.method.s2.l1">Préparer un questionnaire ou des entretiens.</li>
+                <li data-i18n="nq.method.s2.l2">
+                  Interroger des personnes qui utilisent des applications
+                  musicales.
+                </li>
+                <li data-i18n="nq.method.s2.l3">Analyser leurs habitudes, frustrations et attentes.</li>
+                <li data-i18n="nq.method.s2.l4">Regrouper les réponses en thèmes communs.</li>
+              </ul>
+            </div>
+            <div
+              class="fr bx"
+              role="img"
+              aria-label="Regroupement des besoins par thèmes"
+            >
+              <h4 data-i18n="nq.method.s2.box.title">Regroupement des besoins · hypothèses de départ</h4>
+              <div class="aff">
+                <div>
+                  <h5 data-i18n="nq.method.s2.box.discovery.h">Découverte</h5>
+                  <i class="y" data-i18n="nq.method.s2.box.discovery.i1"
+                    >Trouver de nouveaux artistes sans chercher longtemps</i
+                  ><i class="y" data-i18n="nq.method.s2.box.discovery.i2">Des suggestions qui me ressemblent</i>
+                </div>
+                <div>
+                  <h5 data-i18n="nq.method.s2.box.listening.h">Écoute</h5>
+                  <i class="b" data-i18n="nq.method.s2.box.listening.i1">Retrouver mes playlists en un geste</i
+                  ><i class="b" data-i18n="nq.method.s2.box.listening.i2">Passer d'un titre à l'autre sans friction</i>
+                </div>
+                <div>
+                  <h5 data-i18n="nq.method.s2.box.voice.h">Voix et karaoké</h5>
+                  <i class="p" data-i18n="nq.method.s2.box.voice.i1">Chanter avec les paroles à l'écran</i
+                  ><i class="p" data-i18n="nq.method.s2.box.voice.i2">M'enregistrer et partager ma voix</i>
+                </div>
+                <div>
+                  <h5 data-i18n="nq.method.s2.box.radio.h">Radio et live</h5>
+                  <i class="g" data-i18n="nq.method.s2.box.radio.i1">Écouter la FM locale dans la même application</i
+                  ><i class="g" data-i18n="nq.method.s2.box.radio.i2">Suivre mes artistes en direct</i>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">3</span>
+              <h3 data-i18n="nq.method.s3.title">Define, définir le besoin</h3>
+              <p class="ob" data-i18n="nq.method.s3.obj">
+                Transformer les observations en un problème de conception
+                précis.
+              </p>
+              <ul>
+                <li data-i18n="nq.method.s3.l1">Créer un persona basé sur les données recueillies.</li>
+                <li data-i18n="nq.method.s3.l2">Définir les besoins et les frustrations prioritaires.</li>
+                <li data-i18n="nq.method.s3.l3">Rédiger une problématique UX.</li>
+                <li data-i18n="nq.method.s3.l4">Formuler les critères de réussite du projet.</li>
+              </ul>
+            </div>
+            <div
+              class="fr bx"
+              role="img"
+              aria-label="Carte d'empathie du persona Miora"
+            >
+              <h4 data-i18n="nq.method.s3.box.title">Persona fictif · Miora, 22 ans, étudiante à Antananarivo</h4>
+              <div class="em">
+                <div>
+                  <h5 data-i18n="nq.method.s3.box.say.h">Dit</h5>
+                  <p data-i18n="nq.method.s3.box.say.p1">«Je ne sais jamais quoi écouter.»</p>
+                  <p data-i18n="nq.method.s3.box.say.p2">«J'aimerais chanter sur mes titres préférés.»</p>
+                </div>
+                <div>
+                  <h5 data-i18n="nq.method.s3.box.think.h">Pense</h5>
+                  <p data-i18n="nq.method.s3.box.think.p">
+                    «Je voudrais découvrir des artistes malgaches et
+                    internationaux au même»
+                  </p>
+                </div>
+                <div>
+                  <h5 data-i18n="nq.method.s3.box.do.h">Fait</h5>
+                  <p data-i18n="nq.method.s3.box.do.p">
+                    Écoute en déplacement et pendant ses révisions, suit ses
+                    artistes, écoute la radio FM.
+                  </p>
+                </div>
+                <div>
+                  <h5 data-i18n="nq.method.s3.box.feel.h">Ressent</h5>
+                  <p data-i18n="nq.method.s3.box.feel.p">
+                    Perdue devant trop de choix. Heureuse quand un titre tombe
+                    juste.
+                  </p>
+                </div>
+                <b class="av">M</b>
+              </div>
+              <div class="dp">
+                <div>
+                  <h5 data-i18n="nq.method.s3.box.pain.h">Douleurs</h5>
+                  <p data-i18n="nq.method.s3.box.pain.p">
+                    Trop d'applications pour écouter, chanter et suivre la
+                    radio. Des suggestions qui ne lui ressemblent pas.
+                  </p>
+                </div>
+                <div class="bn">
+                  <h5 data-i18n="nq.method.s3.box.gain.h">Bénéfices</h5>
+                  <p data-i18n="nq.method.s3.box.gain.p">
+                    Tout au même endroit, découvrir facilement, chanter et
+                    partager.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">4</span>
+              <h3 data-i18n="nq.method.s4.title">Information Architecture, structurer l'application</h3>
+              <p class="ob" data-i18n="nq.method.s4.obj">
+                Organiser les contenus et faciliter la navigation.
+              </p>
+              <ul>
+                <li data-i18n="nq.method.s4.l1">Créer le sitemap.</li>
+                <li data-i18n="nq.method.s4.l2">Définir les catégories et les écrans principaux.</li>
+                <li data-i18n="nq.method.s4.l3">
+                  Construire les user flows : rechercher une musique, écouter un
+                  album, accéder au karaoké.
+                </li>
+                <li data-i18n="nq.method.s4.l4">Définir la navigation principale.</li>
+              </ul>
+            </div>
+            <div
+              class="fr sm"
+              role="img"
+              aria-label="Sitemap et parcours d'inscription de l'application Nasique"
+            >
+              <h4 data-i18n="nq.method.s4.sitemap.title">Sitemap</h4>
+              <div class="smg">
+                <div>
+                  <b data-i18n="nq.method.s4.sitemap.home">Accueil</b><span data-i18n="nq.method.s4.sitemap.home1">Titres</span><span data-i18n="nq.method.s4.sitemap.home2">Artistes</span
+                  ><span data-i18n="nq.method.s4.sitemap.home3">Playlists</span>
+                </div>
+                <div><b data-i18n="nq.method.s4.sitemap.tracking">Suivi</b></div>
+                <div>
+                  <b data-i18n="nq.method.s4.sitemap.live">Live</b><span data-i18n="nq.method.s4.sitemap.live1">Salon en direct</span
+                  ><span data-i18n="nq.method.s4.sitemap.live2">Messages et paroles</span>
+                </div>
+                <div>
+                  <b data-i18n="nq.method.s4.sitemap.radio">Radio</b><span data-i18n="nq.method.s4.sitemap.radio1">Station</span><span data-i18n="nq.method.s4.sitemap.radio2">Favoris</span
+                  ><span data-i18n="nq.method.s4.sitemap.radio3">Enregistrement</span>
+                </div>
+                <div>
+                  <b data-i18n="nq.method.s4.sitemap.profile">Profil</b><span data-i18n="nq.method.s4.sitemap.profile1">Rubrique</span><span data-i18n="nq.method.s4.sitemap.profile2">Artistes suivis</span
+                  ><span data-i18n="nq.method.s4.sitemap.profile3">Playlist</span><span data-i18n="nq.method.s4.sitemap.profile4">Historique</span>
+                </div>
+              </div>
+              <h4 style="margin-top: 24px" data-i18n="nq.method.s4.userflow.title">User flow</h4>
+              <div class="fl">
+                <span data-i18n="nq.method.s4.flow.open">Ouverture</span><i>→</i><span data-i18n="nq.method.s4.flow.login">Connexion</span><i>→</i
+                ><span data-i18n="nq.method.s4.flow.style">Style musical</span><i>→</i><span data-i18n="nq.method.s4.flow.artists">Artistes préférés</span
+                ><i>→</i><span data-i18n="nq.method.s4.flow.home">Accueil</span><i>→</i><span data-i18n="nq.method.s4.flow.player">Lecteur</span><i>→</i
+                ><span data-i18n="nq.method.s4.flow.last">Karaoké ou Live</span>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">5</span>
+              <h3 data-i18n="nq.method.s5.title">Wireframing, concevoir les premières solutions</h3>
+              <p class="ob" data-i18n="nq.method.s5.obj">
+                Tester la structure avant de travailler l'apparence.
+              </p>
+              <ul>
+                <li data-i18n="nq.method.s5.l1">Dessiner les wireframes basse fidélité.</li>
+                <li data-i18n="nq.method.s5.l2">Organiser les éléments et les actions principales.</li>
+                <li data-i18n="nq.method.s5.l3">Vérifier la hiérarchie de l'information.</li>
+                <li data-i18n="nq.method.s5.l4">
+                  Comparer plusieurs solutions de navigation si nécessaire.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="fr wf"
+              id="wf"
+              role="img"
+              aria-label="Wireframes basse fidélité : style musical, accueil, lecteur, karaoké, live, radio"
+            ></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="ui">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="nq.design.label">Design</div>
+          <h2 data-i18n="nq.design.title" data-i18n-html>Une interface sombre,<br />une touche de jaune.</h2>
+        </div>
+        <div class="ui2 rv">
+          <div>
+            <h3 data-i18n="nq.design.ui.title">UI Design, créer l'interface</h3>
+            <p class="ob" data-i18n="nq.design.ui.obj">
+              Construire une interface visuelle cohérente et accessible.
+            </p>
+            <ul>
+              <li data-i18n="nq.design.ui.l1">Définir les couleurs, la typographie et les espacements.</li>
+              <li data-i18n="nq.design.ui.l2">Créer les composants réutilisables.</li>
+              <li data-i18n="nq.design.ui.l3">Concevoir les écrans haute fidélité.</li>
+              <li data-i18n="nq.design.ui.l4">
+                Prévoir les états interactifs et les différentes tailles de
+                contenu.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="nq.design.proto.title">Prototypage et tests d'utilisabilité</h3>
+            <p class="ob" data-i18n="nq.design.proto.obj">
+              Vérifier si les utilisateurs comprennent et utilisent facilement
+              l'application.
+            </p>
+            <ul>
+              <li data-i18n="nq.design.proto.l1">Créer un prototype interactif sur Figma.</li>
+              <li data-i18n="nq.design.proto.l2">Préparer des tâches réalistes.</li>
+              <li data-i18n="nq.design.proto.l3">Observer des utilisateurs qui réalisent ces tâches.</li>
+              <li data-i18n="nq.design.proto.l4">Identifier les blocages et améliorer les écrans.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pal rv">
+          <div>
+            <i style="background: #f5cb5c"></i><span data-i18n="nq.palette.yellow">Jaune</span><small>#F5CB5C</small>
+          </div>
+          <div>
+            <i style="background: #242423"></i><span data-i18n="nq.palette.black">Noir</span><small>#242423</small>
+          </div>
+          <div>
+            <i style="background: #333533"></i><span data-i18n="nq.palette.charcoal">Anthracite</span><small>#333533</small>
+          </div>
+          <div>
+            <i style="background: #e8eddf"></i><span data-i18n="nq.palette.chalk">Craie</span><small>#E8EDDF</small>
+          </div>
+        </div>
+        <div class="ty rv">
+          <div>
+            <b style="font-weight: 800; letter-spacing: 0.02em"
+              >Monument Extended</b
+            >
+            <p data-i18n="nq.type.extended">Bold, pour les titres et le logo : large, affirmée, musicale.</p>
+          </div>
+          <div>
+            <b style="font-weight: 400">Inter</b>
+            <p data-i18n="nq.type.inter">
+              Regular, pour le texte courant et les interfaces : neutre et
+              lisible.
+            </p>
+          </div>
+        </div>
+        <div class="two rv" style="margin-top: 50px">
+          <div>
+            <h3 style="font-weight: 600; font-size: 16px; margin-bottom: 8px" data-i18n="nq.name.title">
+              Le nom
+            </h3>
+            <p style="color: #666; font-size: 15px" data-i18n="nq.name.text">
+              Nasique, c'est Nas (mon prénom) + Musique : court, personnel et
+              facile à retenir, dans l'esprit de Spotify ou Deezer.
+            </p>
+          </div>
+          <a
+            class="fr"
+            href="../assets/img/nasique/logo-phones.jpg"
+            target="_blank"
+            rel="noopener"
+            ><img
+              src="../assets/img/nasique/nasique-logo-phones.jpg"
+              alt="Logo Nasique et écran de connexion sur iPhone"
+              loading="lazy"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="autres">
+      <div class="c">
+        <div class="lb rv" data-i18n="nq.others.label">Projets récents</div>
+        <h2 class="rv" data-i18n="nq.others.title" data-i18n-html>Autres projets<br />conçus par mes soins</h2>
+        <div class="pg rv">
+          <a class="pj" href="projet-codeuni.html"
+            ><small><b>[ <span data-i18n="nq.others.codeuni.tag">Site web</span> ]</b> <span data-i18n="nq.others.codeuni.sub">Agence digitale</span></small>
+            <h3>CodeUni</h3>
+            <p data-i18n="nq.others.codeuni.desc">UI/UX Design · Site vitrine · Identité</p>
+            <div class="th im">
+              <img
+                src="../assets/img/nascore/nascore-site-web-codeuni.jpg"
+                alt="Site web CodeUni"
+                loading="lazy"
+              /></div
+          ></a>
+          <a class="pj" href="../index.html#projets"
+            ><small><b>[ <span data-i18n="nq.others.portfolio.tag">Portfolio</span> ]</b> <span data-i18n="nq.others.portfolio.sub">UI/UX et Graphic</span></small>
+            <h3 data-i18n="nq.others.portfolio.title">Tous mes projets</h3>
+            <p data-i18n="nq.others.portfolio.desc">Interfaces · Branding · Affiches</p>
+            <div class="th">→</div></a
+          >
+        </div>
+        <div class="nb rv">
+          <div>
+            <b>3+</b><span data-i18n="nq.stats.years" data-i18n-html>années<br />d'expérience</span>
+          </div>
+          <div>
+            <b>10+</b><span data-i18n="nq.stats.tools" data-i18n-html>outils<br />maîtrisés</span>
+          </div>
+          <div>
+            <b>2</b><span data-i18n="nq.stats.disciplines" data-i18n-html>disciplines<br />UI/UX & Graphic</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="border-top: 1px solid var(--line)">
+      <div class="c nx">
+        <div class="rv">
+          <h2 data-i18n="nq.contact.title" data-i18n-html>Un projet<br />en tête ?</h2>
+          <p class="lead" data-i18n="nq.contact.lead">
+            Parlons de votre application, de votre interface ou de votre
+            identité.
+          </p>
+        </div>
+        <div
+          class="rv"
+          style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap"
+        >
+          <a class="pill" href="../index.html#contact" data-i18n="nav.contact" data-i18n-html>Me contacter <i>↗</i></a>
+          <a class="gh" href="../index.html#projets" data-i18n="nq.contact.other">Voir les autres projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="c">
+        <span class="lg">Myari</span
+        ><span data-i18n="footer.text"
+          >MN.CREATIVE © 2026 Myari Nasandratra, UI/UX & Graphic Designer</span
+        >
+      </div>
+    </footer>
+
+    <script src="../js/i18n-nasique.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/nav-mobile.js"></script>
+    <script src="../js/projet-nasique.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NasCore, application mobile fintech | Myari Nasandratra</title>
+    <meta
+      name="description"
+      content="Étude de cas UI/UX 2026 : NasCore, une application mobile qui centralise comptes bancaires et Mobile Money : solde, transferts, bilan et épargne."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Artboard.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <noscript
+      ><style>
+        .rv {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+    <link rel="stylesheet" href="../css/projet-nascor.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="c">
+        <a href="../index.html">
+          <img
+            src="../assets/img/Artboard.svg"
+            alt="Accueil"
+            width="28"
+            height="28"
+          />
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nl" id="navLinks">
+          <a href="../index.html#projets" data-i18n="nav.projects">Mes projets</a
+          ><a href="../index.html#apropos" data-i18n="nav.about">À propos</a
+          ><a href="../index.html#process" data-i18n="nav.process">Mon process</a>
+          <div class="lang-switch">
+            <button class="lang-btn" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="pill" href="../index.html#contact" data-i18n="nav.contact" data-i18n-html
+            >Me contacter <i>↗</i></a
+          >
+        </div>
+      </div>
+    </nav>
+    <header class="hero cs-hero" id="top">
+      <div class="c">
+        <a class="back" href="../index.html#projets" data-i18n="ns.back">← Tous les projets</a>
+        <h1>NasCore</h1>
+        <p class="sub" data-i18n="ns.sub">
+          Une plateforme digitale qui centralise et simplifie la gestion des
+          services financiers et interactifs.
+        </p>
+        <div class="meta">
+          <div>
+            <small data-i18n="ns.meta.services.l">Services</small
+            ><b data-i18n="ns.meta.services.v">UX Research · UI Design · Product Design</b>
+          </div>
+          <div><small data-i18n="ns.meta.cat.l">Catégorie</small><b data-i18n="ns.meta.cat.v">Fintech, application mobile</b></div>
+          <div><small data-i18n="ns.meta.year.l">Année</small><b>2026</b></div>
+          <div><small data-i18n="ns.meta.tools.l">Outils</small><b>Figma</b></div>
+        </div>
+      </div>
+    </header>
+    <section id="projet" class="pr0">
+      <div class="c">
+        <a
+          class="fr rv"
+          href="../assets/img/nascore/cover.jpg"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="../assets/img/nascore/nascore-cover.jpg"
+            alt="NasCore, UI/UX 2026 : deux écrans de l'application, accueil et connexion"
+        /></a>
+        <div class="nv rv">
+          <h3 data-i18n="ns.challenge.title">Le défi</h3>
+          <div>
+            <p class="ld" data-i18n="ns.challenge.lead">
+              Gérer son argent simplement, sans passer par une banque physique.
+            </p>
+            <p data-i18n="ns.challenge.text">
+              NasCore est une application mobile qui permet de gérer son argent
+              grâce à la technologie : Mobile Money, transferts, paiement de
+              factures et épargne, en toute sécurité. Le défi UX : centraliser
+              comptes bancaires et Mobile Money dans une interface claire, sans
+              noyer l'utilisateur sous les chiffres.
+            </p>
+          </div>
+        </div>
+        <div class="nv rv">
+          <h3 data-i18n="ns.solution.title">La solution</h3>
+          <div>
+            <p class="ld" data-i18n="ns.solution.lead">
+              Un seul solde, cinq onglets : Accueil, Bilan, Transférer, Épargne,
+              Profil.
+            </p>
+            <p data-i18n="ns.solution.text">
+              L'accueil affiche le total des fonds, banque et Mobile Money
+              réunis, avec une carte par compte et les dernières transactions.
+              Les autres onglets portent chacun une fonction clé : suivre les
+              dépenses, transférer, épargner vers des objectifs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fonctions">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="ns.features.label">Caractéristiques clés</div>
+          <h2 data-i18n="ns.features.title" data-i18n-html>Tout votre argent,<br />au même endroit.</h2>
+        </div>
+        <div class="fs rv" id="fs">
+          <div class="fv" id="fv"></div>
+          <div>
+            <div class="cap" id="cap" aria-live="polite"></div>
+            <ol class="sl" id="sl"></ol>
+          </div>
+        </div>
+        <div class="fg c2 rv" style="margin-top: 60px">
+          <figure>
+            <a
+              class="fr"
+              href="../assets/img/nascore/s-accueil.jpg"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="../assets/img/nascore/nascore-s-accueil.jpg"
+                alt="Écran d'accueil NasCore mis en scène : solde total, cartes et transactions"
+                loading="lazy"
+            /></a>
+            <figcaption data-i18n="ns.features.fig.home">Accueil</figcaption>
+          </figure>
+          <figure>
+            <a
+              class="fr"
+              href="../assets/img/nascore/s-bilan.jpg"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="../assets/img/nascore/nascore-s-bilan.jpg"
+                alt="Écran Bilan NasCore : dépenses totales et répartition par catégorie"
+                loading="lazy"
+            /></a>
+            <figcaption data-i18n="ns.features.fig.summary">Bilan</figcaption>
+          </figure>
+          <figure>
+            <a
+              class="fr"
+              href="../assets/img/nascore/s-epargne.jpg"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="../assets/img/nascore/nascore-s-epargne.jpg"
+                alt="Écran Épargne NasCore : objectifs et progression"
+                loading="lazy"
+            /></a>
+            <figcaption data-i18n="ns.features.fig.savings">Épargne</figcaption>
+          </figure>
+          <figure>
+            <a
+              class="fr"
+              href="../assets/img/nascore/hero.jpg"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="../assets/img/nascore/nascore-hero.jpg"
+                alt="L'application NasCore tenue en main : accueil avec solde et transactions"
+                loading="lazy"
+            /></a>
+            <figcaption data-i18n="ns.features.fig.hand">En main</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section id="ecrans">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="ns.app.label">L'application</div>
+          <h2 data-i18n="ns.app.title" data-i18n-html>Dix écrans,<br />un seul parcours.</h2>
+        </div>
+        <div class="sh rv" id="sh2">
+          <div class="sx">
+            <div class="cap" id="cap2" aria-live="polite"></div>
+            <ol class="sl" id="sl2"></ol>
+          </div>
+          <div class="pw">
+            <div
+              class="ph2"
+              id="ph2x"
+              title="Cliquer pour l'écran suivant"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="mq" aria-label="Tous les écrans de NasCore">
+        <div class="mt" id="mt2"></div>
+      </div>
+    </section>
+    <section class="light" id="resultat">
+      <div class="c">
+        <div class="nv rv" style="margin-top: 0">
+          <h3 data-i18n="ns.result.title">Le résultat</h3>
+          <div>
+            <p class="ld" data-i18n="ns.result.lead">Un solde unique, des gestes rapides.</p>
+            <p style="color: #555" data-i18n="ns.result.text">
+              Les sorties sont en rouge et les entrées en vert, sur fond sombre,
+              pour lire un montant d'un coup d'œil. Les comptes se parcourent en
+              faisant glisser les cartes, et la barre de cinq onglets garde les
+              quatre fonctions clés à un geste.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ux">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="ns.method.label">La méthode</div>
+          <h2 data-i18n="ns.method.title" data-i18n-html>Huit étapes,<br />de l'idée à l'interface.</h2>
+        </div>
+        <div class="rm">
+          <div class="gl" data-i18n="ns.method.group1">De l'idée à la structure</div>
+          <article class="rv">
+            <span class="n">1</span>
+            <h3 data-i18n="ns.method.s1.title">Idéation et vision du produit</h3>
+            <ul>
+              <li data-i18n="ns.method.s1.l1">Définition de NasCore (application fintech / wallet)</li>
+              <li data-i18n="ns.method.s1.l2">
+                Objectifs du produit : gérer son argent sans banque physique
+              </li>
+              <li data-i18n="ns.method.s1.l3">
+                Fonctionnalités clés : Mobile Money, transferts, paiement de
+                factures, épargne
+              </li>
+            </ul>
+          </article>
+          <article class="rv">
+            <span class="n">2</span>
+            <h3 data-i18n="ns.method.s2.title">Recherche utilisateur</h3>
+            <ul>
+              <li data-i18n="ns.method.s2.l1">
+                Identification de la cible : utilisateurs Mobile Money, jeunes
+                actifs, entrepreneurs
+              </li>
+              <li data-i18n="ns.method.s2.l2">
+                Analyse des problèmes : sécurité, lenteur, manque de suivi des
+                dépenses
+              </li>
+              <li data-i18n="ns.method.s2.l3">
+                Collecte d'insights : interviews, observation, questionnaires
+              </li>
+            </ul>
+          </article>
+          <article class="rv">
+            <span class="n">3</span>
+            <h3 data-i18n="ns.method.s3.title">Analyse et synthèse</h3>
+            <ul>
+              <li data-i18n="ns.method.s3.l1">Création de personas</li>
+              <li data-i18n="ns.method.s3.l2">Définition des besoins utilisateurs</li>
+              <li data-i18n="ns.method.s3.l3">Identification des pain points</li>
+              <li data-i18n="ns.method.s3.l4">User journey map</li>
+            </ul>
+          </article>
+          <article class="rv">
+            <span class="n">4</span>
+            <h3 data-i18n="ns.method.s4.title">Architecture de l'information</h3>
+            <ul>
+              <li data-i18n="ns.method.s4.l1">Organisation des pages principales</li>
+              <li data-i18n="ns.method.s4.l2">Structure logique de l'application</li>
+              <li data-i18n="ns.method.s4.l3">Définition du contenu par écran</li>
+            </ul>
+          </article>
+          <div class="gl" data-i18n="ns.method.group2">De la structure à l'interface</div>
+          <article class="rv">
+            <span class="n">5</span>
+            <h3 data-i18n="ns.method.s5.title">User flow</h3>
+            <ul>
+              <li data-i18n="ns.method.s5.l1">Connexion (code / Touch ID)</li>
+              <li data-i18n="ns.method.s5.l2">Transfert d'argent</li>
+              <li data-i18n="ns.method.s5.l3">Paiement de factures</li>
+              <li data-i18n="ns.method.s5.l4">Épargne</li>
+            </ul>
+          </article>
+          <article class="rv">
+            <span class="n">6</span>
+            <h3 data-i18n="ns.method.s6.title">Wireframes basse fidélité</h3>
+            <ul>
+              <li data-i18n="ns.method.s6.l1">Création des écrans principaux en version simple</li>
+              <li data-i18n="ns.method.s6.l2">Mise en place des layouts</li>
+              <li data-i18n="ns.method.s6.l3">Validation rapide de la navigation</li>
+            </ul>
+          </article>
+          <article class="rv">
+            <span class="n">7</span>
+            <h3 data-i18n="ns.method.s7.title">Design system et UI foundation</h3>
+            <ul>
+              <li data-i18n="ns.method.s7.l1">Couleurs (variables + style guide)</li>
+              <li data-i18n="ns.method.s7.l2">Typographie : H1, H2, body, caption</li>
+              <li data-i18n="ns.method.s7.l3">Iconographie</li>
+              <li data-i18n="ns.method.s7.l4">Spacing system (grille iOS)</li>
+              <li data-i18n="ns.method.s7.l5">Composants : boutons, cards, inputs</li>
+            </ul>
+          </article>
+          <article class="rv">
+            <span class="n">8</span>
+            <h3 data-i18n="ns.method.s8.title">UI design</h3>
+            <ul>
+              <li data-i18n="ns.method.s8.l1">Design complet mobile-first</li>
+              <li data-i18n="ns.method.s8.l2">
+                Pages : connexion et authentification, accueil et bilan,
+                transfert Mobile Money, paiement de factures, épargne et suivi
+                financier, profil et paramètres
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="light" id="ui">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="ns.design.label">Design</div>
+          <h2 data-i18n="ns.design.title" data-i18n-html>Vert émeraude<br />sur fond nuit.</h2>
+        </div>
+        <div class="pal rv">
+          <div>
+            <i style="background: #07ce9f"></i><span data-i18n="ns.design.color.green">Vert NasCore</span><small
+              >#07ce9f (approx.)</small
+            >
+          </div>
+          <div>
+            <i style="background: #084c41"></i><span data-i18n="ns.design.color.deep">Vert profond</span><small
+              >#084c41 (approx.)</small
+            >
+          </div>
+          <div>
+            <i style="background: #082c2a"></i><span data-i18n="ns.design.color.night">Nuit</span><small
+              >#082c2a (approx.)</small
+            >
+          </div>
+          <div>
+            <i style="background: #ac1b1d"></i><span data-i18n="ns.design.color.outflow">Sortie d'argent</span><small
+              >#ac1b1d (approx.)</small
+            >
+          </div>
+        </div>
+        <div class="lgo rv">
+          <img
+            src="../assets/img/nascore/nascore-logo-nascore.jpg"
+            alt="Logo NasCore"
+          /><img
+            class="i"
+            src="../assets/img/nascore/nascore-icone-de-l-application-nascore.jpg"
+            alt="Icône de l'application NasCore"
+          />
+        </div>
+        <div class="chips rv">
+          <span data-i18n="ns.design.chip1">Couleurs en variables + style guide</span
+          ><span data-i18n="ns.design.chip2">Typographie H1, H2, body, caption</span
+          ><span data-i18n="ns.design.chip3">Iconographie</span><span data-i18n="ns.design.chip4">Spacing system, grille iOS</span
+          ><span data-i18n="ns.design.chip5">Boutons, cards, inputs</span><span data-i18n="ns.design.chip6">Mobile-first</span>
+        </div>
+      </div>
+    </section>
+    <section id="autres">
+      <div class="c">
+        <div class="lb rv" data-i18n="ns.others.label">Projets récents</div>
+        <h2 class="rv" data-i18n="ns.others.title" data-i18n-html>Autres projets<br />conçus par mes soins</h2>
+        <div class="pg rv">
+          <a class="pj" href="projet-nasique.html"
+            ><small><b>[ <span data-i18n="ns.others.nasique.tag">UX/UI Mobile</span> ]</b> <span data-i18n="ns.others.nasique.sub">Streaming musical</span></small>
+            <h3>Nasique</h3>
+            <p data-i18n="ns.others.nasique.desc">Projet personnel · Recherche UX, interface, prototype</p>
+            <div class="th im">
+              <img
+                src="../assets/img/nascore/nascore-identite-de-l-application-nasique.jpg"
+                alt="Identité de l'application Nasique"
+                loading="lazy"
+              /></div
+          ></a>
+          <a class="pj" href="projet-codeuni.html"
+            ><small><b>[ <span data-i18n="ns.others.codeuni.tag">Site web</span> ]</b> <span data-i18n="ns.others.codeuni.sub">Agence digitale</span></small>
+            <h3>CodeUni</h3>
+            <p data-i18n="ns.others.codeuni.desc">UI/UX Design · Site vitrine · Identité</p>
+            <div class="th im">
+              <img
+                src="../assets/img/nascore/nascore-site-web-codeuni.jpg"
+                alt="Site web CodeUni"
+                loading="lazy"
+              /></div
+          ></a>
+        </div>
+        <div class="nb rv">
+          <div>
+            <b>3+</b><span data-i18n="ns.stats.years" data-i18n-html>années<br />d'expérience</span>
+          </div>
+          <div>
+            <b>10+</b><span data-i18n="ns.stats.tools" data-i18n-html>outils<br />maîtrisés</span>
+          </div>
+          <div>
+            <b>2</b><span data-i18n="ns.stats.disciplines" data-i18n-html>disciplines<br />UI/UX & Graphic</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" style="border-top: 1px solid var(--line)">
+      <div class="c nx">
+        <div class="rv">
+          <h2 data-i18n="ns.contact.title" data-i18n-html>Un projet<br />en tête ?</h2>
+          <p class="lead" data-i18n="ns.contact.lead">
+            Parlons de votre application, de votre interface ou de votre
+            identité.
+          </p>
+        </div>
+        <div
+          class="rv"
+          style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap"
+        >
+          <a class="pill" href="../index.html#contact" data-i18n="nav.contact" data-i18n-html>Me contacter <i>↗</i></
+          ><a class="gh" href="../index.html#projets" data-i18n="ns.contact.other">Voir les autres projets</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="c">
+        <span class="lg">Myari</span
+        ><span data-i18n="footer.text"
+          >MN.CREATIVE © 2026 Myari Nasandratra, UI/UX & Graphic Designer</span
+        >
+      </div>
+    </footer>
+    <script src="../js/i18n-nascor.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/nav-mobile.js"></script>
+    <script src="../js/projet-nascor.js"></script>
+  </body>
+</html>
