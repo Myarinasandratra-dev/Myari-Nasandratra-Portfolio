@@ -2,7 +2,7 @@
    window.I18N_DICT pour appliquer les traductions. Le français reste le
    texte par défaut directement dans le HTML. */
 window.I18N_DICT = {
-  "cv.href": "assets/cv/CV_Nasandratra_Andriankotomiarintsoa_EN.pdf",
+  "cv.href": "assets/cv/CV_ANDRIANKOTOMIARINTSOA_Nasandratra_EN.pdf",
   "cv.download": "CV-Myari-Nasandratra-EN.pdf",
 
   "nav.projects": "My projects",
