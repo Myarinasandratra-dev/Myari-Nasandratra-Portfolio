@@ -932,3 +932,53 @@ figure figcaption {
     height: 56px;
   }
 }
+
+/* ===== Swipe + boutons précédent/suivant (mobile) ===== */
+.sw-ctl {
+  display: none;
+}
+.ph2 {
+  touch-action: pan-y; /* le glisser horizontal est pour le carrousel, le vertical fait défiler la page */
+}
+@media (max-width: 820px) {
+  .pw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sw-ctl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 22px;
+    position: relative;
+    z-index: 1;
+  }
+  .sw-ctl button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--k2);
+    color: var(--w);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .sw-ctl button:active {
+    background: var(--l);
+    color: var(--k);
+  }
+  .sw-count {
+    min-width: 56px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--g);
+    font-variant-numeric: tabular-nums;
+  }
+  /* OPTIONNEL : masquer la longue liste en bas sur mobile (swipe + flèches la remplacent).
+     Décommente la règle ci-dessous si tu veux la cacher. Les boutons restent dans la page,
+     le défilement automatique continue de fonctionner. */
+  /* .sh .sl { display: none; } */
+}
