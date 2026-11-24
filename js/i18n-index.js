@@ -33,10 +33,10 @@ window.I18N_DICT = {
   "projects.ferber.desc":
     "Logo and packaging design for a tattoo ink brand, manufactured in-house with full transparency about its ingredients.",
 
-  "projects.codeuni.tag": "Web Design",
-  "projects.codeuni.title": "CodeUni, digital agency website",
+  "projects.codeuni.tag": "UX Research · UX/UI Design · Web Design ",
+  "projects.codeuni.title": "AeroLink",
   "projects.codeuni.desc":
-    "Editorial, bold and fast showcase website · UI/UX Design",
+    " A website for booking and tracking packages between Madagascar and the rest of the world, with delivery in 3 to 5 days. Get an estimated price before you commit.",
 
   "projects.nascor.tag": "UX Research · UI Design · Product Design",
   "projects.nascor.title": "NasCore",
