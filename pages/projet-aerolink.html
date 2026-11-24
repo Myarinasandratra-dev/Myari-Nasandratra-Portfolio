@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      AeroLink, site web d'expédition internationale | Myari Nasandratra
+    </title>
+    <meta
+      name="description"
+      content="Étude de cas UX/UI : AeroLink, un site web de réservation et de suivi de colis entre Madagascar et l'international, avec tarif estimé avant de s'engager."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Artboard.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <noscript
+      ><style>
+        .rv {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+    <link rel="stylesheet" href="../css/projet-nasique.css" />
+    <link rel="stylesheet" href="../css/projet-aerolink.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="c">
+        <a href="../index.html">
+          <img
+            src="../assets/img/Artboard.svg"
+            alt="Accueil"
+            width="28"
+            height="28"
+          />
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nl" id="navLinks">
+          <a href="../index.html#projets" data-i18n="nav.projects"
+            >Mes projets</a
+          ><a href="../index.html#apropos" data-i18n="nav.about">À propos</a
+          ><a href="../index.html#process" data-i18n="nav.process"
+            >Mon process</a
+          >
+          <div class="lang-switch">
+            <button class="lang-btn" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a
+            class="pill"
+            href="../index.html#contact"
+            data-i18n="nav.contact"
+            data-i18n-html
+            >Me contacter <i>↗</i></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero cs-hero" id="top">
+      <div class="c">
+        <a class="back" href="../index.html#projets" data-i18n="al.back"
+          >← Tous les projets</a
+        >
+        <h1>AeroLink</h1>
+        <p class="sub" data-i18n="al.sub">
+          Site web de réservation et de suivi de colis entre Madagascar et le
+          monde, en 3 à 5 jours. Un tarif estimé avant de s'engager.
+        </p>
+        <div class="meta">
+          <div>
+            <small>Services</small
+            ><b>UX Research · UX/UI Design · Web Design</b>
+          </div>
+          <div>
+            <small data-i18n="al.meta.cat">Catégorie</small
+            ><b data-i18n="al.meta.cat.v">Site web, transport et logistique</b>
+          </div>
+          <div>
+            <small data-i18n="al.meta.target">Cible</small
+            ><b data-i18n="al.meta.target.v"
+              >Particuliers et petites entreprises</b
+            >
+          </div>
+          <div>
+            <small data-i18n="al.meta.link">Lien</small
+            ><b
+              ><a href="https://aerolink.mg/" target="_blank" rel="noopener"
+                >aerolink.mg</a
+              ></b
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="projet" class="pr0">
+      <div class="c">
+        <a
+          class="fr rv"
+          href="../assets/img/aerolink/aerolink-home.jpg"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="../assets/img/aerolink/aerolink-home.jpg"
+            alt="Page d'accueil du site AeroLink"
+        /></a>
+        <div class="nv rv">
+          <h3 data-i18n="al.challenge.title">Le défi</h3>
+          <div>
+            <p class="ld" data-i18n="al.challenge.lead">
+              Comment envoyer un colis à l'international sans découvrir de frais
+              à l'arrivée ?
+            </p>
+            <p data-i18n="al.challenge.text">
+              Entre Madagascar et l'étranger, les tarifs sont souvent peu
+              lisibles, les délais incertains et le suivi dispersé. Le défi UX :
+              simplifier et rendre plus transparent l'envoi, tout en rassurant
+              sur les tarifs, les délais, la douane et le suivi.
+            </p>
+          </div>
+        </div>
+        <div class="nv rv">
+          <h3 data-i18n="al.solution.title">La solution</h3>
+          <div>
+            <p class="ld" data-i18n="al.solution.lead">
+              Un calculateur dès l'accueil, une réservation sans compte, un
+              suivi à chaque étape.
+            </p>
+            <p data-i18n="al.solution.text">
+              Le parcours se découvre par niveaux : l'utilisateur renseigne son
+              itinéraire, découvre son estimation, puis ouvre le formulaire
+              complet. Une FAQ douane, un suivi par numéro et une section
+              Business complètent le site.
+            </p>
+            <div class="chips">
+              <span data-i18n="al.chip1"
+                >P0 · Calculateur, formulaire, suivi</span
+              >
+              <span data-i18n="al.chip2"
+                >P1 · FAQ douane, contact, Business</span
+              >
+              <span data-i18n="al.chip3">P2 · Témoignages, destinations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecrans">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="al.screens.label">Les pages</div>
+          <h2 data-i18n="al.screens.title" data-i18n-html>
+            De l'estimation<br />à la livraison.
+          </h2>
+        </div>
+        <div class="sh sw2 rv" id="sh">
+          <div class="sx">
+            <div class="cap" id="cap" aria-live="polite"></div>
+            <ol class="sl" id="sl"></ol>
+          </div>
+          <div class="bw">
+            <div class="bar"><i></i><i></i><i></i><span>aerolink.mg</span></div>
+            <div class="bv" id="bv">
+              <img
+                id="bi"
+                src="../assets/img/aerolink/aerolink-home.jpg"
+                alt="Aperçu des pages du site AeroLink"
+              />
+            </div>
+          </div>
+        </div>
+        <a
+          class="gh"
+          style="display: inline-block; margin-top: 30px"
+          href="https://aerolink.mg/"
+          target="_blank"
+          rel="noopener"
+          data-i18n="al.pd.btn2"
+          >Voir le site en ligne</a
+        >
+      </div>
+    </section>
+
+    <section class="light" id="resultat">
+      <div class="c">
+        <div class="nv rv" style="margin-top: 0">
+          <h3 data-i18n="al.result.title">Le résultat</h3>
+          <div>
+            <p class="ld" data-i18n="al.result.lead">
+              Un fond clair, des cartes blanches et une seule action en avant :
+              estimer son envoi.
+            </p>
+            <p style="color: #555" data-i18n="al.result.text">
+              La principale tension : donner assez d'informations pour rassurer
+              sans surcharger. Je l'ai résolue avec un calculateur au-dessus de
+              la ligne de flottaison, des champs affichés selon la direction, et
+              des informations de réassurance réparties au fil de la page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ux">
+      <div class="c">
+        <div class="rv">
+          <div class="lb" data-i18n="al.method.label">La méthode</div>
+          <h2 data-i18n="al.method.title" data-i18n-html>
+            Des étapes UX<br />au prototype.
+          </h2>
+        </div>
+        <div class="ux">
+          <article class="rv">
+            <div>
+              <span class="n">1</span>
+              <h3 data-i18n="al.s1.title">Discovery, comprendre le problème</h3>
+              <p class="ob" data-i18n="al.s1.obj">
+                Comprendre ce qui rend l'envoi international difficile.
+              </p>
+              <ul>
+                <li data-i18n="al.s1.l1">
+                  Formuler six questions de recherche : prix, délais, douane,
+                  abandon, suivi, assistance.
+                </li>
+                <li data-i18n="al.s1.l2">
+                  Comparer AeroLink aux services classiques.
+                </li>
+                <li data-i18n="al.s1.l3">
+                  Poser six hypothèses à vérifier (H1 à H6).
+                </li>
+                <li data-i18n="al.s1.l4">
+                  Protocole proposé : 5 + 3 entretiens, 20 à 30 réponses, 4
+                  concurrents, 5 tests.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="fr bx"
+              role="img"
+              aria-label="Comparaison des services classiques et d'AeroLink"
+            >
+              <h4 data-i18n="al.s1.box">
+                Analyse concurrentielle · positionnement UX à étudier
+              </h4>
+              <div class="cmp">
+                <div>
+                  <b data-i18n="al.s1.c1">Estimation du prix</b>
+                  <p data-i18n="al.s1.c1p">
+                    Souvent via devis, ici un calculateur instantané
+                  </p>
+                </div>
+                <div>
+                  <b data-i18n="al.s1.c2">Réservation et compte</b>
+                  <p data-i18n="al.s1.c2p">
+                    Contact ou formulaire, ici un formulaire en ligne sans
+                    compte obligatoire
+                  </p>
+                </div>
+                <div>
+                  <b data-i18n="al.s1.c3">Suivi et assistance</b>
+                  <p data-i18n="al.s1.c3p">
+                    Selon le transporteur, ici un numéro de tracking et un chat
+                  </p>
+                </div>
+                <div class="ns">
+                  <b data-i18n="al.s1.c4">Opportunité AeroLink</b>
+                  <p data-i18n="al.s1.c4p">
+                    Une FAQ douane dédiée et un tarif connu avant de s'engager
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">2</span>
+              <h3 data-i18n="al.s2.title">
+                User Research, recherche utilisateur
+              </h3>
+              <p class="ob" data-i18n="al.s2.obj">
+                Préparer les questions avant de dessiner les écrans.
+              </p>
+              <ul>
+                <li data-i18n="al.s2.l1">
+                  Profil et habitudes : fréquence, destinations, type d'envoi.
+                </li>
+                <li data-i18n="al.s2.l2">
+                  Problèmes : frais surprises, douane, suivi du colis.
+                </li>
+                <li data-i18n="al.s2.l3">
+                  Attentes : informations avant réservation, compte ou non,
+                  WhatsApp, e-mail ou téléphone.
+                </li>
+                <li data-i18n="al.s2.l4">
+                  Regrouper les réponses en quatre thèmes.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="fr bx"
+              role="img"
+              aria-label="Regroupement des hypothèses par thèmes"
+            >
+              <h4 data-i18n="al.s2.box">
+                Regroupement des besoins · hypothèses de départ
+              </h4>
+              <div class="aff">
+                <div>
+                  <h5 data-i18n="al.s2.g1">Transparence tarifaire</h5>
+                  <i class="y" data-i18n="al.s2.g1a"
+                    >Une estimation du prix avant de décider</i
+                  ><i class="y" data-i18n="al.s2.g1b"
+                    >Pas de frais découverts à l'arrivée</i
+                  >
+                </div>
+                <div>
+                  <h5 data-i18n="al.s2.g2">Besoin de confiance</h5>
+                  <i class="b" data-i18n="al.s2.g2a"
+                    >Délais, frais et formalités faciles à trouver</i
+                  ><i class="b" data-i18n="al.s2.g2b"
+                    >Des explications sur la douane</i
+                  >
+                </div>
+                <div>
+                  <h5 data-i18n="al.s2.g3">Besoin de suivi</h5>
+                  <i class="p" data-i18n="al.s2.g3a"
+                    >Collecté, expédié ou livré : savoir où il en est</i
+                  >
+                </div>
+                <div>
+                  <h5 data-i18n="al.s2.g4">Simplicité</h5>
+                  <i class="g" data-i18n="al.s2.g4a">Une réservation courte</i
+                  ><i class="g" data-i18n="al.s2.g4b"
+                    >Sans création de compte</i
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">3</span>
+              <h3 data-i18n="al.s3.title">Define, définir le besoin</h3>
+              <p class="ob" data-i18n="al.s3.obj">
+                Transformer les observations en un problème précis.
+              </p>
+              <ul>
+                <li data-i18n="al.s3.l1">
+                  Trois personas : Hanta (importatrice), Tokiniaina (documents),
+                  Andry (B2B).
+                </li>
+                <li data-i18n="al.s3.l2">
+                  Problème central : le manque de transparence et de simplicité.
+                </li>
+                <li data-i18n="al.s3.l3">
+                  Cinq « Comment pourrions-nous… » : estimer, réserver sans
+                  compte, rassurer sur la douane, suivre, gérer les envois
+                  réguliers.
+                </li>
+                <li data-i18n="al.s3.l4">
+                  Prioriser les fonctionnalités de P0 à P2.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="fr bx"
+              role="img"
+              aria-label="Carte d'empathie du persona Hanta"
+            >
+              <h4 data-i18n="al.s3.box">
+                Persona · Hanta R., 28 ans, micro-entrepreneuse à Antananarivo
+              </h4>
+              <div class="em">
+                <div>
+                  <h5 data-i18n="al.s3.say">Dit</h5>
+                  <p data-i18n="al.s3.say1">
+                    « Je veux connaître le tarif avant de réserver. »
+                  </p>
+                  <p data-i18n="al.s3.say2">
+                    « Je préfère être contactée sur WhatsApp. »
+                  </p>
+                </div>
+                <div>
+                  <h5 data-i18n="al.s3.think">Pense</h5>
+                  <p data-i18n="al.s3.think1">
+                    « Combien cela va-t-il me coûter ? »
+                  </p>
+                  <p data-i18n="al.s3.think2">
+                    « Mon colis arrivera-t-il à temps ? »
+                  </p>
+                </div>
+                <div>
+                  <h5 data-i18n="al.s3.do">Fait</h5>
+                  <p data-i18n="al.s3.do1">
+                    Compare les transporteurs, consulte les tarifs, contacte le
+                    service client.
+                  </p>
+                </div>
+                <div>
+                  <h5 data-i18n="al.s3.feel">Ressent</h5>
+                  <p data-i18n="al.s3.feel1">
+                    Inquiétude concernant la douane. Besoin d'être rassurée.
+                  </p>
+                </div>
+                <b class="av">H</b>
+              </div>
+              <div class="dp">
+                <div>
+                  <h5 data-i18n="al.s3.pain">Douleurs</h5>
+                  <p data-i18n="al.s3.pain1">
+                    Tarifs peu transparents, délais incertains, douane difficile
+                    à comprendre.
+                  </p>
+                </div>
+                <div class="bn">
+                  <h5 data-i18n="al.s3.gain">Bénéfices</h5>
+                  <p data-i18n="al.s3.gain1">
+                    Prix estimé avant réservation, livraison suivie, assistance
+                    humaine.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">4</span>
+              <h3 data-i18n="al.s4.title">
+                Information Architecture, structurer le site
+              </h3>
+              <p class="ob" data-i18n="al.s4.obj">
+                Aider chacun à trouver rapidement ce qu'il cherche.
+              </p>
+              <ul>
+                <li data-i18n="al.s4.l1">
+                  Créer le sitemap et la navigation principale.
+                </li>
+                <li data-i18n="al.s4.l2">
+                  Ordonner la page d'accueil : hero, calculateur, quatre étapes,
+                  destinations, témoignages, suivi, FAQ, Business.
+                </li>
+                <li data-i18n="al.s4.l3">
+                  Construire trois parcours : envoyer, suivre, client
+                  professionnel.
+                </li>
+                <li data-i18n="al.s4.l4">
+                  Cartographier l'expérience de Hanta, de la découverte à la
+                  livraison.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="fr sm"
+              role="img"
+              aria-label="Sitemap, user flow et parcours émotionnel d'AeroLink"
+            >
+              <h4>Sitemap</h4>
+              <div class="smg sg3">
+                <div>
+                  <b>Ship</b><span data-i18n="al.sm.calc">Calculateur</span
+                  ><span data-i18n="al.sm.book">Réservation</span>
+                </div>
+                <div>
+                  <b>Track</b><span data-i18n="al.sm.num">Numéro</span
+                  ><span data-i18n="al.sm.status">Statut du colis</span>
+                </div>
+                <div>
+                  <b>Where we deliver</b><span>Destinations</span
+                  ><span data-i18n="al.sm.lead">Délais</span>
+                </div>
+                <div>
+                  <b>Business</b><span>Services</span
+                  ><span data-i18n="al.sm.quote">Demande de devis</span>
+                </div>
+                <div>
+                  <b>How it works</b><span data-i18n="al.sm.steps">Étapes</span>
+                </div>
+                <div>
+                  <b>Support</b><span>FAQ</span><span>Chat</span
+                  ><span>Contact</span>
+                </div>
+              </div>
+              <h4 style="margin-top: 24px" data-i18n="al.flow.title">
+                User flow · envoyer un colis
+              </h4>
+              <div class="fl">
+                <span data-i18n="al.fl.home">Accueil</span><i>→</i
+                ><span data-i18n="al.fl.route">Origine et destination</span
+                ><i>→</i><span data-i18n="al.fl.weight">Poids</span><i>→</i
+                ><span data-i18n="al.fl.content">Contenu</span><i>→</i
+                ><span data-i18n="al.fl.price">Tarif estimé</span><i>→</i
+                ><span data-i18n="al.fl.send">Envoyer ce colis</span><i>→</i
+                ><span data-i18n="al.fl.info">Informations</span><i>→</i
+                ><span data-i18n="al.fl.mail">Confirmation par e-mail</span
+                ><i>→</i><span data-i18n="al.fl.track">Suivi</span><i>→</i
+                ><span data-i18n="al.fl.deliv">Livraison</span>
+              </div>
+              <h4 style="margin-top: 24px" data-i18n="al.jr.title">
+                Parcours émotionnel · projection illustrative
+              </h4>
+              <div
+                class="jr"
+                role="img"
+                aria-label="Courbe émotionnelle de 1 à 5"
+              >
+                <div style="height: 60%">
+                  <span data-i18n="al.jr1">Découv.</span>
+                </div>
+                <div class="hl" style="height: 70%">
+                  <span data-i18n="al.jr2">Estim.</span>
+                </div>
+                <div style="height: 55%">
+                  <span data-i18n="al.jr3">Prépa.</span>
+                </div>
+                <div class="hl" style="height: 35%">
+                  <span data-i18n="al.jr4">Réserv.</span>
+                </div>
+                <div style="height: 65%">
+                  <span data-i18n="al.jr5">Confirm.</span>
+                </div>
+                <div style="height: 50%">
+                  <span data-i18n="al.fl.track">Suivi</span>
+                </div>
+                <div style="height: 95%">
+                  <span data-i18n="al.jr6">Livr.</span>
+                </div>
+              </div>
+              <p class="nt" style="margin-top: 22px" data-i18n="al.jr.note">
+                Point critique : l'estimation et la réservation. Le prix doit
+                dire ce qu'il comprend et ce qui reste à confirmer.
+              </p>
+            </div>
+          </article>
+          <article class="rv">
+            <div>
+              <span class="n">5</span>
+              <h3 data-i18n="al.s5.title">
+                Wireframing, concevoir les premières solutions
+              </h3>
+              <p class="ob" data-i18n="al.s5.obj">
+                Tester la structure avant de travailler l'apparence.
+              </p>
+              <ul>
+                <li data-i18n="al.s5.l1">
+                  Cinq écrans : accueil, calculateur, résultat du tarif,
+                  réservation, tracking.
+                </li>
+                <li data-i18n="al.s5.l2">
+                  Afficher les champs selon la direction, avec autocomplétion
+                  des villes.
+                </li>
+                <li data-i18n="al.s5.l3">
+                  Mentionner que le prix final sera confirmé.
+                </li>
+                <li data-i18n="al.s5.l4">
+                  Concevoir cinq statuts de suivi, de la réservation à la
+                  remise.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="fr wf"
+              id="wf"
+              role="img"
+              aria-label="Wireframes basse fidélité : accueil, calculateur, résultat du tarif, réservation, tracking"
+            ></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="ui">
+      <div class="c">
+        <div class="rv">
+          <div class="lb">Design</div>
+          <h2 data-i18n="al.design.title" data-i18n-html>
+            Un fond clair,<br />une touche de turquoise.
+          </h2>
+        </div>
+        <div class="ui2 rv">
+          <div>
+            <h3 data-i18n="al.ui.title">UI Design, créer l'interface</h3>
+            <p class="ob" data-i18n="al.ui.obj">
+              Une interface qui inspire confiance, fiabilité et modernité.
+            </p>
+            <ul>
+              <li data-i18n="al.ui.l1">
+                Bleu marine pour les titres, turquoise pour les actions.
+              </li>
+              <li data-i18n="al.ui.l2">
+                Blanc pour les cartes et formulaires, orange pour les alertes.
+              </li>
+              <li data-i18n="al.ui.l3">
+                Composants : header, boutons, input, select, radio, card,
+                timeline de suivi, accordéon FAQ, toast.
+              </li>
+              <li data-i18n="al.ui.l4">
+                Vérifier les contrastes WCAG des petits textes et boutons.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="al.pr.title">
+              Prototypage et tests d'utilisabilité
+            </h3>
+            <p class="ob" data-i18n="al.pr.obj">
+              Vérifier que le tarif et le suivi se comprennent sans aide.
+            </p>
+            <ul>
+              <li data-i18n="al.pr.l1">
+                Prototype Figma, test modéré, 5 participants, 15 à 20 minutes,
+                Think Aloud.
+              </li>
+              <li data-i18n="al.pr.l2">
+                Trois scénarios : estimer, réserver, suivre un colis.
+              </li>
+              <li data-i18n="al.pr.l3">
+                Mesurer : réussite, temps, erreurs, SUS.
+              </li>
+              <li data-i18n="al.pr.l4">
+                Résultats à mesurer : aucun chiffre n'est annoncé avant les
+                vrais tests.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pal p6 rv">
+          <div>
+            <i style="background: #142b49"></i
+            ><span data-i18n="al.pal.navy">Bleu marine</span
+            ><small>#142B49</small>
+          </div>
+          <div>
+            <i style="background: #22a6a1"></i>Turquoise<small>#22A6A1</small>
+          </div>
+          <div>
+            <i style="background: #f3f4f2"></i
+            ><span data-i18n="al.pal.light">Gris clair</span
+            ><small>#F3F4F2</small>
+          </div>
+          <div>
+            <i style="background: #ffffff"></i
+            ><span data-i18n="al.pal.white">Blanc</span><small>#FFFFFF</small>
+          </div>
+          <div>
+            <i style="background: #263238"></i
+            ><span data-i18n="al.pal.dark">Gris foncé</span
+            ><small>#263238</small>
+          </div>
+          <div>
+            <i style="background: #e5883b"></i>Orange<small>#E5A43B</small>
+          </div>
+        </div>
+        <p class="nt dk" data-i18n="al.pal.note">
+          Seule la couleur de fond #F3F4F2 est confirmée dans le projet. Le
+          reste est une proposition de design system.
+        </p>
+        <div class="ty rv">
+          <div>
+            <b style="font-weight: 600">Inter Semibold</b>
+            <p data-i18n="al.ty.semi">
+              Boutons, labels et informations importantes. H1 48–56 px, H2 32–40
+              px, H3 24 px.
+            </p>
+          </div>
+          <div>
+            <b style="font-weight: 400">Inter Regular</b>
+            <p data-i18n="al.ty.reg">
+              Titres, paragraphes, navigation et formulaires. Corps 16 px,
+              labels 14 px.
+            </p>
+          </div>
+        </div>
+        <div class="two rv" style="margin-top: 50px">
+          <div>
+            <h3 style="font-weight: 600; font-size: 16px; margin-bottom: 8px">
+              Progressive disclosure
+            </h3>
+            <p style="color: #666; font-size: 15px" data-i18n="al.pd.text">
+              Ne pas tout montrer d'un coup : l'itinéraire, puis l'estimation,
+              puis le formulaire complet. Moins de charge cognitive, un parcours
+              plus accessible.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 22px;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 26px;
+              "
+            >
+              <a
+                class="pill"
+                href="https://aerolink.mg/"
+                target="_blank"
+                rel="noopener"
+                data-i18n="al.pd.btn1"
+                data-i18n-html
+                >Essayer le calculateur <i>↗</i></a
+              >
+              <a
+                class="gh"
+                href="https://aerolink.mg/"
+                target="_blank"
+                rel="noopener"
+                data-i18n="al.pd.btn2"
+                >Voir le site en ligne</a
+              >
+            </div>
+          </div>
+          <a
+            class="fr"
+            href="https://aerolink.mg/"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="crop"
+              src="../assets/img/aerolink/aerolink-home.jpg"
+              alt="Calculateur de tarif AeroLink, ouvrir le site en ligne"
+              loading="lazy"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="autres">
+      <div class="c">
+        <div class="lb rv" data-i18n="al.others.label">Projets récents</div>
+        <h2 class="rv" data-i18n="al.others.title" data-i18n-html>
+          Autres projets<br />conçus par mes soins
+        </h2>
+        <div class="pg rv">
+          <a class="pj" href="projet-nasique.html"
+            ><small
+              ><b>[ Mobile ]</b>
+              <span data-i18n="al.others.nq.sub">Streaming musical</span></small
+            >
+            <h3>Nasique</h3>
+            <p>UX Design · Mobile UI · Product Design</p>
+            <div class="th im">
+              <img
+                src="../assets/img/nasique/nasique.jpg"
+                alt="Application Nasique"
+                loading="lazy"
+              /></div
+          ></a>
+          <a class="pj" href="projet-codeuni.html"
+            ><small
+              ><b>[ <span data-i18n="al.others.cu.tag">Site web</span> ]</b>
+              <span data-i18n="al.others.cu.sub">Agence digitale</span></small
+            >
+            <h3>CodeUni</h3>
+            <p data-i18n="al.others.cu.desc">
+              UI/UX Design · Site vitrine · Identité
+            </p>
+            <div class="th im">
+              <img
+                src="../assets/img/nascore/nascore-site-web-codeuni.jpg"
+                alt="Site web CodeUni"
+                loading="lazy"
+              /></div
+          ></a>
+        </div>
+        <div class="nb rv">
+          <div>
+            <b>3+</b
+            ><span data-i18n="al.stats.years" data-i18n-html
+              >années<br />d'expérience</span
+            >
+          </div>
+          <div>
+            <b>10+</b
+            ><span data-i18n="al.stats.tools" data-i18n-html
+              >outils<br />maîtrisés</span
+            >
+          </div>
+          <div>
+            <b>2</b
+            ><span data-i18n="al.stats.disc" data-i18n-html
+              >disciplines<br />UI/UX & Graphic</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="border-top: 1px solid var(--line)">
+      <div class="c nx">
+        <div class="rv">
+          <h2 data-i18n="al.contact.title" data-i18n-html>
+            Un projet<br />en tête ?
+          </h2>
+          <p class="lead" data-i18n="al.contact.lead">
+            Parlons de votre site, de votre interface ou de votre identité.
+          </p>
+        </div>
+        <div
+          class="rv"
+          style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap"
+        >
+          <a
+            class="pill"
+            href="../index.html#contact"
+            data-i18n="nav.contact"
+            data-i18n-html
+            >Me contacter <i>↗</i></a
+          >
+          <a
+            class="gh"
+            href="../index.html#projets"
+            data-i18n="al.contact.other"
+            >Voir les autres projets</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="c">
+        <span class="lg">Myari</span
+        ><span data-i18n="footer.text"
+          >MN.CREATIVE © 2026 Myari Nasandratra, UI/UX & Graphic Designer</span
+        >
+      </div>
+    </footer>
+
+    <script src="../js/i18n-aerolink.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/nav-mobile.js"></script>
+    <script src="../js/projet-aerolink.js"></script>
+  </body>
+</html>
